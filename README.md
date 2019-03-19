@@ -34,7 +34,8 @@ let even: Int.Even
 ## Related projects
 
 - Swift:
-	- [NonEmpty](https://github.com/pointfreeco/swift-nonempty)
+    - [NonEmpty](https://github.com/pointfreeco/swift-nonempty)
+    - [Validated](https://github.com/Ben-G/Validated)
 - Scala:
     - [Refined](https://github.com/fthomas/refined)
     - [Bond](https://github.com/fwbrasil/bond)
