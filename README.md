@@ -6,7 +6,7 @@ Generics based [refinement types](https://en.wikipedia.org/wiki/Refinement_type)
 
 You define a type constraint by conforming to `Predicate` protocol.
 
-```
+```swift
 struct Even: Predicate {
     static func isValid(value: Int) -> Bool {
         return value % 2 == 0
@@ -16,13 +16,13 @@ struct Even: Predicate {
 
 In order to use the refined type described by the predicate, you parametrize the generic `Refined` with it.
 
-```
+```swift
 let even: Refined<Even>
 ```
 
 You can create a typealias to provide a less verbose way to refer to the new type.
 
-```
+```swift
 extension Int {
     public typealias Even = Refined<Even>
 }
