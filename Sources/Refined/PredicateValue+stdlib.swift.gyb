@@ -1,0 +1,24 @@
+% import csv
+% source = '../../Resources/PredicateValue.csv'
+%{
+def buildOperator(type):
+  if type == "protocol":
+    return ":"
+  else:
+    return " =="
+}%
+% warning = 'Generated with gyb. Do not edit.'
+// ${warning}
+
+import Swift
+% with open(source) as file:
+%   for row in csv.DictReader(file):
+%       name = row['Type']
+%       type = row['Is']
+%       operator = buildOperator(type)
+%       parent = row['Parent type']
+
+/// Predicate that represents a concrete `${name}` value.
+public protocol Predicate${name}: Predicate${parent} where Value${operator} ${name} {}
+%   end
+% end

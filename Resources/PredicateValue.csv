@@ -1,0 +1,8 @@
+Type,Is,Parent type
+Comparable,protocol,Value
+Numeric,protocol,Comparable
+BinaryInteger,protocol,Numeric
+Int,struct,BinaryInteger
+UInt,struct,Numeric
+Float,struct,Numeric
+Double,struct,Numeric
