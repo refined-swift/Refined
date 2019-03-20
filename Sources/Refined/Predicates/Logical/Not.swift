@@ -1,0 +1,11 @@
+import Swift
+
+/// Negates a predicate.
+public struct Not<P: Predicate>: Predicate {
+    @available(*, unavailable)
+    private init() {}
+
+    public static func isValid(value: P.Value) -> Bool {
+        return !P.isValid(value: value)
+    }
+}
