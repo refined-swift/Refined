@@ -1,0 +1,15 @@
+% warning = 'Generated with gyb. Do not edit.'
+// ${warning}
+
+import Features
+
+% import csv
+% source = '../../Resources/Properties.csv'
+% with open(source) as file:
+%   for row in csv.DictReader(file):
+%       protocol = row['Protocol']
+%       property = row['Property name']
+%       returnType = row['Retrun type']
+extension Refined: ${protocol} where WrappedValue: ${protocol} {}
+%   end
+% end

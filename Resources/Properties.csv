@@ -1,0 +1,3 @@
+Protocol,Property name,Retrun type
+Countable,count,Int
+MaybeEmpty,isEmpty,Bool

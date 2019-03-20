@@ -11,11 +11,12 @@ let package = Package(
     ],
     dependencies: [
         .package(url: "https://github.com/refined-swift/Wrapper.git", .branch("master")),
+        .package(url: "https://github.com/refined-swift/Features.git", .branch("master")),
     ],
     targets: [
         .target(
             name: "Refined",
-            dependencies: ["Wrapper"]),
+            dependencies: ["Wrapper", "Features"]),
         .testTarget(
             name: "RefinedTests",
             dependencies: ["Refined"]),
