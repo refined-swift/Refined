@@ -1,8 +1,11 @@
 import Swift
 
+/// Representation of a refinement constraint.
 public protocol Predicate {
     associatedtype Value
+    /// Checks the given value.
     static func checkValue(_ value: Value) throws
+    /// Validates the given value.
     static func isValid(value: Value) -> Bool
 }
 
