@@ -24,14 +24,14 @@ You can create a typealias to provide a less verbose way to refer to the new typ
 
 ```swift
 extension Int {
-    public typealias Even = Refined<Even>
+    typealias Even = Refined<Even>
 }
 
 let even: Int.Even
 
 ```
 
-## Related projects
+## Alternatives
 
 - Swift:
     - [NonEmpty](https://github.com/pointfreeco/swift-nonempty)
