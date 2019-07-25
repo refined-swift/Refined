@@ -1,0 +1,25 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "Features",
+        "repositoryURL": "https://github.com/refined-swift/Features.git",
+        "state": {
+          "branch": "master",
+          "revision": "f326e40e992b86d01a8c80057fe503d4ea66c2bd",
+          "version": null
+        }
+      },
+      {
+        "package": "Wrapper",
+        "repositoryURL": "https://github.com/refined-swift/Wrapper.git",
+        "state": {
+          "branch": "master",
+          "revision": "75338b7a731c038801ed05a2c7ff9a3ee7e35fba",
+          "version": null
+        }
+      }
+    ]
+  },
+  "version": 1
+}
