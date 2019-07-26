@@ -9,7 +9,6 @@ final class OrTests: XCTestCase {
 
     func testOrCanBeInvalid() {
         XCTAssertNil(Refined<Or<Array<Void>.NonEmpty, Array<Void>.NonEmpty>>([]))
-        struct One: PredicateInt { static let value = 1 }
         XCTAssertNil(Array<Void>.NonEmpty.Or.Count<One>([]))
     }
 
