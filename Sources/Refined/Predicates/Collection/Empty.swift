@@ -10,9 +10,9 @@ public struct Empty<V: MaybeEmpty>: Predicate {
     }
 }
 
-public typealias EmptyPredicate = Empty
+public typealias _EmptyPredicate = Empty
 
 extension MaybeEmpty {
-    public typealias Empty = Refined<EmptyPredicate<Self>>
-    public typealias NonEmpty = Refined<Not<EmptyPredicate<Self>>>
+    public typealias Empty = Refined<_EmptyPredicate<Self>>
+    public typealias NonEmpty = Empty.Not
 }

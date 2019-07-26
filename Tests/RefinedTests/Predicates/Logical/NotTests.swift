@@ -8,10 +8,12 @@ final class NotTests: XCTestCase {
 
     func testNotCanBeValid() {
         XCTAssertNotNil(Array<Void>.NonEmpty([Void()]))
+        XCTAssertNotNil(Array<Void>.Empty.Not([Void()]))
     }
 
     func testNotCanBeInvalid() {
         XCTAssertNil(Array<Void>.NonEmpty([]))
+        XCTAssertNil(Array<Void>.Empty.Not([]))
     }
 
     static var allTests = [
