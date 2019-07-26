@@ -9,9 +9,3 @@ public struct Not<P: Predicate>: Predicate {
         return !P.isValid(value: value)
     }
 }
-
-public typealias _NotPredicate = Not
-
-extension Refined {
-    public typealias _Not = Refined<_NotPredicate<Constraint>>
-}
