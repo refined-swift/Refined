@@ -2,6 +2,10 @@ import XCTest
 @testable import Refined
 
 final class EmptyTests: XCTestCase {
+    func testNonEmptyUsesNot() {
+        XCTAssertTrue((String.NonEmpty.self as Any.Type) is Refined<Not<Empty<String>>>.Type)
+    }
+
     func testEmptyCanBeValid() {
         XCTAssertNotNil(String.Empty(""))
     }
@@ -11,6 +15,7 @@ final class EmptyTests: XCTestCase {
     }
 
     static var allTests = [
+        ("testNonEmptyUsesNot", testNonEmptyUsesNot),
         ("testEmptyCanBeValid", testEmptyCanBeValid),
         ("testEmptyCanBeInvalid", testEmptyCanBeInvalid),
     ]

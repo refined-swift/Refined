@@ -1,6 +1,6 @@
 import Swift
 
-// Conjunction of the predicates P and Q.
+// Conjunction of predicates P and Q.
 public struct And<P: Predicate, Q: Predicate>: Predicate where P.Value == Q.Value {
     @available(*, unavailable)
     private init() {}
@@ -13,5 +13,14 @@ public struct And<P: Predicate, Q: Predicate>: Predicate where P.Value == Q.Valu
 public typealias _AndPredicate = And
 
 extension Refined {
-    public typealias And<T: Predicate> = Refined<_AndPredicate<Constraint, T>> where T.Value == Constraint.Value
+    public struct And: Predicate {
+        @available(*, unavailable)
+        private init() {}
+        
+        public static func isValid(value: Refined.Value) -> Bool {
+            return Refined.isValid(value: value)
+        }
+    }
+    
+     public typealias _And<T: Predicate> = Refined<_AndPredicate<Constraint, T>> where T.Value == Constraint.Value
 }
