@@ -1,5 +1,5 @@
 import XCTest
-@testable import Refined
+import Refined
 
 final class RefinedTests: XCTestCase {
     func testRefinedThrowingInitCanSucceed() {

@@ -1,5 +1,5 @@
 import XCTest
-@testable import Refined
+import Refined
 
 final class NotTests: XCTestCase {
     func testNonEmptyUsesNot() {
