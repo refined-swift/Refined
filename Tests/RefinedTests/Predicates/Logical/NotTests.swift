@@ -1,5 +1,5 @@
 import XCTest
-import Refined
+@testable import Refined
 
 final class NotTests: XCTestCase {
     func testNonEmptyUsesNot() {
@@ -8,12 +8,12 @@ final class NotTests: XCTestCase {
 
     func testNotCanBeValid() {
         XCTAssertNotNil(Array<Void>.NonEmpty([Void()]))
-        XCTAssertNotNil(Array<Void>.Empty.Not([Void()]))
+        XCTAssertNotNil(Array<Void>.Empty._Not([Void()]))
     }
 
     func testNotCanBeInvalid() {
         XCTAssertNil(Array<Void>.NonEmpty([]))
-        XCTAssertNil(Array<Void>.Empty.Not([]))
+        XCTAssertNil(Array<Void>.Empty._Not([]))
     }
 
     static var allTests = [

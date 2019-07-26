@@ -13,5 +13,5 @@ public struct Not<P: Predicate>: Predicate {
 public typealias _NotPredicate = Not
 
 extension Refined {
-    public typealias Not = Refined<_NotPredicate<Constraint>>
+    public typealias _Not = Refined<_NotPredicate<Constraint>>
 }
