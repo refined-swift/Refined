@@ -7,5 +7,6 @@ struct IsTruePredicate: Predicate {
 }
 
 struct One: PredicateInt { static let value = 1 }
+struct TwoDotFive: PredicateDouble { static let value = 2.5 }
 struct Three: PredicateInt { static let value = 3 }
 struct Four: PredicateInt { static let value = 4 }

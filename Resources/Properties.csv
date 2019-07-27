@@ -1,8 +1,8 @@
-Protocol,Property name,Retrun type
-Countable,count,Int
-MaybeEmpty,isEmpty,Bool
-MaybeLetter,isLetter,Bool
-MaybeLowercase,isLowercase,Bool
-MaybeNumber,isNumber,Bool
-MaybeUppercase,isUppercase,Bool
-MaybeWhitespace,isWhitespace,Bool
+Predicate name,Value equivalence,Constraint protocol,Feature protocol,Property name,Retrun type
+Count,Int,Predicate,Countable,count,Int
+Empty,,,MaybeEmpty,isEmpty,Bool
+Letter,,,MaybeLetter,isLetter,Bool
+Lowercase,,,MaybeLowercase,isLowercase,Bool
+Uppercase,,,MaybeUppercase,isUppercase,Bool
+Number,,,MaybeNumber,isNumber,Bool
+Whitespace,,,MaybeWhitespace,isWhitespace,Bool
