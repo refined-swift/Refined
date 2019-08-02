@@ -6,3 +6,8 @@ Lowercase,,,MaybeLowercase,isLowercase,Bool
 Uppercase,,,MaybeUppercase,isUppercase,Bool
 Number,,,MaybeNumber,isNumber,Bool
 Whitespace,,,MaybeWhitespace,isWhitespace,Bool
+Equal,,PredicateValue,Equatable,,
+Greater,,PredicateComparable,Comparable,,
+GreaterEqual,,PredicateComparable,Comparable,,
+Less,,PredicateComparable,Comparable,,
+LessEqual,,PredicateComparable,Comparable,,

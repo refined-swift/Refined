@@ -117,3 +117,73 @@ extension Refined.Or where Refined.Value: MaybeWhitespace {
     public typealias Whitespace = Refined._Or<_WhitespacePredicate<Refined.Value>>
     public typealias NonWhitespace = Refined._Or<Whitespace._Not>
 }
+
+public typealias _EqualPredicate = Equal
+
+extension Equatable {
+    public typealias Equal<T: PredicateValue> = Refined<_EqualPredicate<T>> where T.Value == Self
+}
+
+extension Refined.And where Refined.Value: Equatable {
+     public typealias Equal<T: PredicateValue> = Refined._And<_EqualPredicate<T>> where T.Value == Refined.Value
+}
+
+extension Refined.Or where Refined.Value: Equatable {
+    public typealias Equal<T: PredicateValue> = Refined._Or<_EqualPredicate<T>> where T.Value == Refined.Value
+}
+
+public typealias _GreaterPredicate = Greater
+
+extension Comparable {
+    public typealias Greater<T: PredicateComparable> = Refined<_GreaterPredicate<T>> where T.Value == Self
+}
+
+extension Refined.And where Refined.Value: Comparable {
+     public typealias Greater<T: PredicateComparable> = Refined._And<_GreaterPredicate<T>> where T.Value == Refined.Value
+}
+
+extension Refined.Or where Refined.Value: Comparable {
+    public typealias Greater<T: PredicateComparable> = Refined._Or<_GreaterPredicate<T>> where T.Value == Refined.Value
+}
+
+public typealias _GreaterEqualPredicate = GreaterEqual
+
+extension Comparable {
+    public typealias GreaterEqual<T: PredicateComparable> = Refined<_GreaterEqualPredicate<T>> where T.Value == Self
+}
+
+extension Refined.And where Refined.Value: Comparable {
+     public typealias GreaterEqual<T: PredicateComparable> = Refined._And<_GreaterEqualPredicate<T>> where T.Value == Refined.Value
+}
+
+extension Refined.Or where Refined.Value: Comparable {
+    public typealias GreaterEqual<T: PredicateComparable> = Refined._Or<_GreaterEqualPredicate<T>> where T.Value == Refined.Value
+}
+
+public typealias _LessPredicate = Less
+
+extension Comparable {
+    public typealias Less<T: PredicateComparable> = Refined<_LessPredicate<T>> where T.Value == Self
+}
+
+extension Refined.And where Refined.Value: Comparable {
+     public typealias Less<T: PredicateComparable> = Refined._And<_LessPredicate<T>> where T.Value == Refined.Value
+}
+
+extension Refined.Or where Refined.Value: Comparable {
+    public typealias Less<T: PredicateComparable> = Refined._Or<_LessPredicate<T>> where T.Value == Refined.Value
+}
+
+public typealias _LessEqualPredicate = LessEqual
+
+extension Comparable {
+    public typealias LessEqual<T: PredicateComparable> = Refined<_LessEqualPredicate<T>> where T.Value == Self
+}
+
+extension Refined.And where Refined.Value: Comparable {
+     public typealias LessEqual<T: PredicateComparable> = Refined._And<_LessEqualPredicate<T>> where T.Value == Refined.Value
+}
+
+extension Refined.Or where Refined.Value: Comparable {
+    public typealias LessEqual<T: PredicateComparable> = Refined._Or<_LessEqualPredicate<T>> where T.Value == Refined.Value
+}
