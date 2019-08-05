@@ -1,0 +1,51 @@
+% import json
+% source = '../../Resources/Maybe.json'
+% warning = 'Generated with gyb. Do not edit.'
+// ${warning}
+
+import Features
+% with open(source) as file:
+%   for feature in json.load(file):
+%     protocol = feature['featureName']
+%     predicate = protocol.replace('Maybe', '', 1)
+%     callName = feature['callName']
+%     available = feature['available']
+%     attribute = available + '\n    ' if available else ''
+%     docName = predicate[0].lower() + predicate[1:]
+
+// MARK: - ${predicate}
+
+/// Refined + ${protocol} extension.
+extension Refined: ${protocol} where WrappedValue: ${protocol} {}
+
+/// Predicate that checks if value is ${docName}.
+${attribute}public struct ${predicate}<V: ${protocol}>: Predicate {
+    @available(*, unavailable)
+    private init() {}
+
+    public static func isValid(value: V) -> Bool {
+        return value.${callName}
+    }
+}
+
+/// Refined's internal typealias of ${predicate}.
+${attribute}public typealias _${predicate}Predicate = ${predicate}
+
+/// ${predicate} DSL extension.
+${attribute}extension ${protocol} {
+    public typealias ${predicate} = Refined<_${predicate}Predicate<Self>>
+    public typealias Non${predicate} = Refined<_${predicate}Predicate<Self>>._Not
+}
+
+/// And + ${predicate} DSL extension.
+${attribute}extension Refined.And where Refined.Value: ${protocol} {
+    public typealias ${predicate} = Refined._And<_${predicate}Predicate<Refined.Value>>
+    public typealias Non${predicate} = Refined._And<${predicate}._Not>
+}
+
+/// Or + ${predicate} DSL extension.
+${attribute}extension Refined.Or where Refined.Value: ${protocol} {
+    public typealias ${predicate} = Refined._Or<_${predicate}Predicate<Refined.Value>>
+    public typealias Non${predicate} = Refined._Or<${predicate}._Not>
+}
+% end

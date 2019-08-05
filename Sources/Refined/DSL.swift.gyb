@@ -1,16 +1,7 @@
-% import csv
-% source = '../../Resources/PredicateValue.csv'
-%{
-def buildOperator(type):
-  if type == "protocol":
-    return ":"
-  else:
-    return " =="
-}%
 % warning = 'Generated with gyb. Do not edit.'
 // ${warning}
 
-import Features
+import Swift
 % import csv
 % source = '../../Resources/Properties.csv'
 % with open(source) as file:
@@ -20,19 +11,25 @@ import Features
 %     constraint = row['Constraint protocol']
 %     protocol = row['Feature protocol']
 
+// MARK: - ${predicate}
+
+/// Refined's internal typealias of ${predicate}.
 public typealias _${predicate}Predicate = ${predicate}
 
+/// ${predicate} DSL extension.
 %     if constraint == '':
 extension ${protocol} {
     public typealias ${predicate} = Refined<_${predicate}Predicate<Self>>
     public typealias Non${predicate} = Refined<_${predicate}Predicate<Self>>._Not
 }
 
+/// And + ${predicate} DSL extension.
 extension Refined.And where Refined.Value: ${protocol} {
     public typealias ${predicate} = Refined._And<_${predicate}Predicate<Refined.Value>>
     public typealias Non${predicate} = Refined._And<${predicate}._Not>
 }
 
+/// Or + ${predicate} DSL extension.
 extension Refined.Or where Refined.Value: ${protocol} {
     public typealias ${predicate} = Refined._Or<_${predicate}Predicate<Refined.Value>>
     public typealias Non${predicate} = Refined._Or<${predicate}._Not>
@@ -42,10 +39,12 @@ extension ${protocol} {
     public typealias ${predicate}<T: ${constraint}> = Refined<_${predicate}Predicate<T>> where T.Value == Self
 }
 
+/// And + ${predicate} DSL extension.
 extension Refined.And where Refined.Value: ${protocol} {
      public typealias ${predicate}<T: ${constraint}> = Refined._And<_${predicate}Predicate<T>> where T.Value == Refined.Value
 }
 
+/// Or + ${predicate} DSL extension.
 extension Refined.Or where Refined.Value: ${protocol} {
     public typealias ${predicate}<T: ${constraint}> = Refined._Or<_${predicate}Predicate<T>> where T.Value == Refined.Value
 }
@@ -54,10 +53,12 @@ extension ${protocol} {
     public typealias ${predicate}<T: ${constraint}> = Refined<_${predicate}Predicate<Self, T>> where T.Value == ${value}
 }
 
+/// And + ${predicate} DSL extension.
 extension Refined.And where Refined.Value: ${protocol} {
     public typealias ${predicate}<T: ${constraint}> = Refined._And<_${predicate}Predicate<Refined.Value, T>> where T.Value == ${value}
 }
 
+/// Or + ${predicate} DSL extension.
 extension Refined.Or where Refined.Value: ${protocol} {
 public typealias ${predicate}<T: ${constraint}> = Refined._Or<_${predicate}Predicate<Refined.Value, T>> where T.Value == ${value}
 }

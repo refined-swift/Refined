@@ -1,0 +1,201 @@
+[
+  {
+    "returnType" : "Int",
+    "types" : [
+      "Array",
+      "ArraySlice",
+      "ContiguousArray",
+      "Int.Words",
+      "Int16.Words",
+      "Int32.Words",
+      "Int64.Words",
+      "Int8.Words",
+      "UInt.Words",
+      "UInt16.Words",
+      "UInt32.Words",
+      "UInt64.Words",
+      "UInt8.Words",
+      "Unicode.Scalar.UTF16View",
+      "UnsafeBufferPointer",
+      "UnsafeMutableBufferPointer"
+    ],
+    "available" : "",
+    "signature" : "var startIndex: Int { get }",
+    "callName" : "startIndex",
+    "protocols" : [
+
+    ],
+    "featureType" : "property",
+    "matchingProtocols" : [
+
+    ],
+    "featureName" : "StartIndexable"
+  },
+  {
+    "returnType" : "UInt64",
+    "types" : [
+      "Double",
+      "Float80"
+    ],
+    "available" : "",
+    "signature" : "var significandBitPattern: UInt64 { get }",
+    "callName" : "significandBitPattern",
+    "protocols" : [
+
+    ],
+    "featureType" : "property",
+    "matchingProtocols" : [
+
+    ],
+    "featureName" : "SignificandBitPatternable"
+  },
+  {
+    "returnType" : "Int",
+    "types" : [
+      "Double",
+      "Float",
+      "Float80"
+    ],
+    "available" : "",
+    "signature" : "var exponent: Int { get }",
+    "callName" : "exponent",
+    "protocols" : [
+
+    ],
+    "featureType" : "property",
+    "matchingProtocols" : [
+
+    ],
+    "featureName" : "Exponentiable"
+  },
+  {
+    "returnType" : "UInt",
+    "types" : [
+      "Double",
+      "Float",
+      "Float80"
+    ],
+    "available" : "",
+    "signature" : "var exponentBitPattern: UInt { get }",
+    "callName" : "exponentBitPattern",
+    "protocols" : [
+
+    ],
+    "featureType" : "property",
+    "matchingProtocols" : [
+
+    ],
+    "featureName" : "ExponentBitPatternable"
+  },
+  {
+    "returnType" : "Int",
+    "types" : [
+      "Array",
+      "ArraySlice",
+      "ContiguousArray",
+      "Int.Words",
+      "Int16.Words",
+      "Int32.Words",
+      "Int64.Words",
+      "Int8.Words",
+      "UInt.Words",
+      "UInt16.Words",
+      "UInt32.Words",
+      "UInt64.Words",
+      "UInt8.Words",
+      "Unicode.Scalar.UTF16View",
+      "UnsafeBufferPointer",
+      "UnsafeMutableBufferPointer"
+    ],
+    "available" : "",
+    "signature" : "var endIndex: Int { get }",
+    "callName" : "endIndex",
+    "protocols" : [
+
+    ],
+    "featureType" : "property",
+    "matchingProtocols" : [
+
+    ],
+    "featureName" : "EndIndexable"
+  },
+  {
+    "returnType" : "Int",
+    "types" : [
+      "AnyBidirectionalCollection",
+      "AnyCollection",
+      "AnyRandomAccessCollection",
+      "Array",
+      "ArraySlice",
+      "CollectionOfOne",
+      "ContiguousArray",
+      "DefaultIndices",
+      "Dictionary",
+      "Dictionary.Keys",
+      "Dictionary.Values",
+      "EmptyCollection",
+      "Int.Words",
+      "Int16.Words",
+      "Int32.Words",
+      "Int64.Words",
+      "Int8.Words",
+      "KeyValuePairs",
+      "Repeated",
+      "ReversedCollection",
+      "Set",
+      "Slice",
+      "String",
+      "String.UTF16View",
+      "String.UTF8View",
+      "String.UnicodeScalarView",
+      "Substring",
+      "Substring.UTF16View",
+      "Substring.UTF8View",
+      "Substring.UnicodeScalarView",
+      "UInt.Words",
+      "UInt16.Words",
+      "UInt32.Words",
+      "UInt64.Words",
+      "UInt8.Words",
+      "Unicode.Scalar.UTF16View",
+      "UnsafeBufferPointer",
+      "UnsafeMutableBufferPointer",
+      "UnsafeMutableRawBufferPointer",
+      "UnsafeRawBufferPointer"
+    ],
+    "available" : "",
+    "signature" : "var count: Int { get }",
+    "callName" : "count",
+    "protocols" : [
+      "Collection",
+      "UnkeyedEncodingContainer"
+    ],
+    "featureType" : "property",
+    "matchingProtocols" : [
+
+    ],
+    "featureName" : "Countable"
+  },
+  {
+    "returnType" : "Int",
+    "types" : [
+      "Array",
+      "ArraySlice",
+      "ContiguousArray",
+      "Dictionary",
+      "ManagedBufferPointer",
+      "Set"
+    ],
+    "available" : "",
+    "signature" : "var capacity: Int { get }",
+    "callName" : "capacity",
+    "protocols" : [
+
+    ],
+    "featureType" : "property",
+    "matchingProtocols" : [
+
+    ],
+    "featureName" : "Capacitying"
+  }
+]

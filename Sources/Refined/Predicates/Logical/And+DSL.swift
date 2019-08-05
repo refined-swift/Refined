@@ -1,7 +1,9 @@
 import Swift
 
+/// Refined's internal typealias of And.
 public typealias _AndPredicate = And
 
+/// And DSL extension.
 extension Refined {    
     public struct And: Predicate {
         @available(*, unavailable)

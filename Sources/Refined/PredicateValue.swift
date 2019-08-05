@@ -11,3 +11,4 @@ extension PredicateValue {
         return value == self.value
     }
 }
+

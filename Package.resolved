@@ -6,7 +6,7 @@
         "repositoryURL": "https://github.com/refined-swift/Features.git",
         "state": {
           "branch": "master",
-          "revision": "161a9cd84e747181f618c2bc89d6402a59586cc0",
+          "revision": "4e64c3bf2f9b26c2047f3bf2c24b9455e2409370",
           "version": null
         }
       },
@@ -15,7 +15,7 @@
         "repositoryURL": "https://github.com/refined-swift/Wrapper.git",
         "state": {
           "branch": "master",
-          "revision": "dc7378daa8de0bfa7d764fec9cfc934a51dfdc49",
+          "revision": "0468a19591e94710e6e162eed9f5be89cd0ee72b",
           "version": null
         }
       }

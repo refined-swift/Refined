@@ -1,0 +1,49 @@
+% import json
+% source = '../../Resources/Properties.json'
+% warning = 'Generated with gyb. Do not edit.'
+// ${warning}
+
+import Features
+% with open(source) as file:
+%   for feature in json.load(file):
+%     protocol = feature['featureName']
+%     callName = feature['callName']
+%     predicate = callName.capitalize()
+%     constraint = 'Predicate'
+%     value = feature['returnType']
+%     available = feature['available']
+%     attribute = available + '\n    ' if available else ''
+
+// MARK: - ${predicate}
+
+/// Refined + ${protocol} extension.
+extension Refined: ${protocol} where WrappedValue: ${protocol} {}
+
+/// Predicate that checks if value's ${callName} satisfies generic constraint.
+${attribute}public struct ${predicate}<V: ${protocol}, C: ${constraint}>: Predicate where C.Value == ${value} {
+    @available(*, unavailable)
+    private init() {}
+
+    public static func isValid(value: V) -> Bool {
+        return C.isValid(value: value.${callName})
+    }
+}
+
+/// Refined's internal typealias of ${predicate}.
+${attribute}public typealias _${predicate}Predicate = ${predicate}
+
+/// ${predicate} DSL extension.
+${attribute}extension ${protocol} {
+    public typealias ${predicate}<T: ${constraint}> = Refined<_${predicate}Predicate<Self, T>> where T.Value == ${value}
+}
+
+/// And + ${predicate} DSL extension.
+${attribute}extension Refined.And where Refined.Value: ${protocol} {
+    public typealias ${predicate}<T: ${constraint}> = Refined._And<_${predicate}Predicate<Refined.Value, T>> where T.Value == ${value}
+}
+
+/// Or + ${predicate} DSL extension.
+${attribute}extension Refined.Or where Refined.Value: ${protocol} {
+    public typealias ${predicate}<T: ${constraint}> = Refined._Or<_${predicate}Predicate<Refined.Value, T>> where T.Value == ${value}
+}
+% end
