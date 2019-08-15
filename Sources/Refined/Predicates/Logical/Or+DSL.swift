@@ -1,6 +1,6 @@
 import Swift
 
-/// Refined's internal typealias of Or.
+/// Refined's internal typealias of `Or`.
 public typealias _OrPredicate = Or
 
 /// Or DSL extension.

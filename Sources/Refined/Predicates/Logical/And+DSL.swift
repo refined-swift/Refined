@@ -1,6 +1,6 @@
 import Swift
 
-/// Refined's internal typealias of And.
+/// Refined's internal typealias of `And`.
 public typealias _AndPredicate = And
 
 /// And DSL extension.

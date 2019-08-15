@@ -1,5 +1,6 @@
 import Swift
 
+/// `Refined` conforms `Predicate`, which makes it possible to implement the DSL extensions that combine predicates.
 extension Refined: Predicate {
     public typealias Value = Constraint.Value
 

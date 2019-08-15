@@ -1,6 +1,6 @@
 import Swift
 
-/// Negates predicate P.
+/// Negates predicate `P`.
 public struct Not<P: Predicate>: Predicate {
     @available(*, unavailable)
     private init() {}

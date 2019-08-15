@@ -1,6 +1,6 @@
 import Swift
 
-// Disjunction of predicates P and Q.
+// Disjunction of predicates `P` and `Q`.
 public struct Or<P: Predicate, Q: Predicate>: Predicate where P.Value == Q.Value {
     @available(*, unavailable)
     private init() {}

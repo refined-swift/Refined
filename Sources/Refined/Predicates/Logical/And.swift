@@ -1,6 +1,6 @@
 import Swift
 
-// Conjunction of predicates P and Q.
+// Conjunction of predicates `P` and `Q`.
 public struct And<P: Predicate, Q: Predicate>: Predicate where P.Value == Q.Value {
     @available(*, unavailable)
     private init() {}
