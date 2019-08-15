@@ -1,0 +1,476 @@
+[
+  {
+    "items" : [
+      {
+        "isInit" : false,
+        "isStatic" : false,
+        "available" : "",
+        "isMethod" : false,
+        "isOperator" : false,
+        "signature" : "public var _cVarArgEncoding: Array<Int>",
+        "callName" : "_cVarArgEncoding",
+        "isThrowing" : false,
+        "parameters" : [
+
+        ]
+      }
+    ],
+    "associatedTypes" : [
+
+    ],
+    "protocolName" : "CVarArg"
+  },
+  {
+    "items" : [
+      {
+        "isInit" : false,
+        "isStatic" : true,
+        "available" : "",
+        "isMethod" : false,
+        "isOperator" : false,
+        "signature" : "public static var allCases: WrappedValue.AllCases",
+        "callName" : "allCases",
+        "isThrowing" : false,
+        "parameters" : [
+
+        ]
+      }
+    ],
+    "associatedTypes" : [
+      "AllCases"
+    ],
+    "protocolName" : "CaseIterable"
+  },
+  {
+    "items" : [
+      {
+        "isInit" : true,
+        "isStatic" : false,
+        "available" : "",
+        "isMethod" : true,
+        "isOperator" : false,
+        "signature" : "public init?(stringValue: String)",
+        "callName" : "init?",
+        "isThrowing" : false,
+        "parameters" : [
+          {
+            "externalLabel" : "stringValue",
+            "internalName" : "stringValue"
+          }
+        ]
+      },
+      {
+        "isInit" : true,
+        "isStatic" : false,
+        "available" : "",
+        "isMethod" : true,
+        "isOperator" : false,
+        "signature" : "public init?(intValue: Int)",
+        "callName" : "init?",
+        "isThrowing" : false,
+        "parameters" : [
+          {
+            "externalLabel" : "intValue",
+            "internalName" : "intValue"
+          }
+        ]
+      },
+      {
+        "isInit" : false,
+        "isStatic" : false,
+        "available" : "",
+        "isMethod" : false,
+        "isOperator" : false,
+        "signature" : "public var stringValue: String",
+        "callName" : "stringValue",
+        "isThrowing" : false,
+        "parameters" : [
+
+        ]
+      },
+      {
+        "isInit" : false,
+        "isStatic" : false,
+        "available" : "",
+        "isMethod" : false,
+        "isOperator" : false,
+        "signature" : "public var intValue: Optional<Int>",
+        "callName" : "intValue",
+        "isThrowing" : false,
+        "parameters" : [
+
+        ]
+      },
+      {
+        "isInit" : false,
+        "isStatic" : false,
+        "available" : "",
+        "isMethod" : false,
+        "isOperator" : false,
+        "signature" : "public var description: String",
+        "callName" : "description",
+        "isThrowing" : false,
+        "parameters" : [
+
+        ]
+      },
+      {
+        "isInit" : false,
+        "isStatic" : false,
+        "available" : "",
+        "isMethod" : false,
+        "isOperator" : false,
+        "signature" : "public var debugDescription: String",
+        "callName" : "debugDescription",
+        "isThrowing" : false,
+        "parameters" : [
+
+        ]
+      }
+    ],
+    "associatedTypes" : [
+
+    ],
+    "protocolName" : "CodingKey"
+  },
+  {
+    "items" : [
+      {
+        "isInit" : false,
+        "isStatic" : true,
+        "available" : "",
+        "isMethod" : true,
+        "isOperator" : true,
+        "signature" : "public static func < (_ lhs: Self, _ rhs: Self) -> Bool",
+        "callName" : "<",
+        "isThrowing" : false,
+        "parameters" : [
+          {
+            "externalLabel" : "_",
+            "internalName" : "lhs"
+          },
+          {
+            "externalLabel" : "_",
+            "internalName" : "rhs"
+          }
+        ]
+      }
+    ],
+    "associatedTypes" : [
+      "Self"
+    ],
+    "protocolName" : "Comparable"
+  },
+  {
+    "items" : [
+      {
+        "isInit" : false,
+        "isStatic" : false,
+        "available" : "",
+        "isMethod" : false,
+        "isOperator" : false,
+        "signature" : "public var debugDescription: String",
+        "callName" : "debugDescription",
+        "isThrowing" : false,
+        "parameters" : [
+
+        ]
+      }
+    ],
+    "associatedTypes" : [
+
+    ],
+    "protocolName" : "CustomDebugStringConvertible"
+  },
+  {
+    "items" : [
+      {
+        "isInit" : false,
+        "isStatic" : false,
+        "available" : "",
+        "isMethod" : false,
+        "isOperator" : false,
+        "signature" : "public var playgroundDescription: Any",
+        "callName" : "playgroundDescription",
+        "isThrowing" : false,
+        "parameters" : [
+
+        ]
+      }
+    ],
+    "associatedTypes" : [
+
+    ],
+    "protocolName" : "CustomPlaygroundDisplayConvertible"
+  },
+  {
+    "items" : [
+      {
+        "isInit" : false,
+        "isStatic" : false,
+        "available" : "",
+        "isMethod" : false,
+        "isOperator" : false,
+        "signature" : "public var customMirror: Mirror",
+        "callName" : "customMirror",
+        "isThrowing" : false,
+        "parameters" : [
+
+        ]
+      }
+    ],
+    "associatedTypes" : [
+
+    ],
+    "protocolName" : "CustomReflectable"
+  },
+  {
+    "items" : [
+      {
+        "isInit" : false,
+        "isStatic" : false,
+        "available" : "",
+        "isMethod" : false,
+        "isOperator" : false,
+        "signature" : "public var description: String",
+        "callName" : "description",
+        "isThrowing" : false,
+        "parameters" : [
+
+        ]
+      }
+    ],
+    "associatedTypes" : [
+
+    ],
+    "protocolName" : "CustomStringConvertible"
+  },
+  {
+    "items" : [
+      {
+        "isInit" : true,
+        "isStatic" : false,
+        "available" : "",
+        "isMethod" : true,
+        "isOperator" : false,
+        "signature" : "public init(from decoder: Decoder) throws",
+        "callName" : "init",
+        "isThrowing" : true,
+        "parameters" : [
+          {
+            "externalLabel" : "from",
+            "internalName" : "decoder"
+          }
+        ]
+      }
+    ],
+    "associatedTypes" : [
+
+    ],
+    "protocolName" : "Decodable"
+  },
+  {
+    "items" : [
+      {
+        "isInit" : false,
+        "isStatic" : true,
+        "available" : "",
+        "isMethod" : true,
+        "isOperator" : true,
+        "signature" : "public static func == (_ lhs: Self, _ rhs: Self) -> Bool",
+        "callName" : "==",
+        "isThrowing" : false,
+        "parameters" : [
+          {
+            "externalLabel" : "_",
+            "internalName" : "lhs"
+          },
+          {
+            "externalLabel" : "_",
+            "internalName" : "rhs"
+          }
+        ]
+      },
+      {
+        "isInit" : false,
+        "isStatic" : true,
+        "available" : "",
+        "isMethod" : true,
+        "isOperator" : true,
+        "signature" : "public static func != (_ lhs: Self, _ rhs: Self) -> Bool",
+        "callName" : "!=",
+        "isThrowing" : false,
+        "parameters" : [
+          {
+            "externalLabel" : "_",
+            "internalName" : "lhs"
+          },
+          {
+            "externalLabel" : "_",
+            "internalName" : "rhs"
+          }
+        ]
+      }
+    ],
+    "associatedTypes" : [
+      "Self"
+    ],
+    "protocolName" : "Equatable"
+  },
+  {
+    "items" : [
+      {
+        "isInit" : false,
+        "isStatic" : false,
+        "available" : "",
+        "isMethod" : false,
+        "isOperator" : false,
+        "signature" : "public var lazy: LazySequence<WrappedValue.Elements>",
+        "callName" : "lazy",
+        "isThrowing" : false,
+        "parameters" : [
+
+        ]
+      }
+    ],
+    "associatedTypes" : [
+      "Element",
+      "Elements",
+      "Elements.Element",
+      "Index",
+      "Indices",
+      "Iterator",
+      "Iterator.Element",
+      "LazyCollection",
+      "OtherSequence.Element",
+      "PossiblePrefix.Element",
+      "R",
+      "R.Bound",
+      "SegmentOfResult.Element",
+      "Self",
+      "SubSequence",
+      "UnboundedRange"
+    ],
+    "protocolName" : "LazyCollectionProtocol"
+  },
+  {
+    "items" : [
+      {
+        "isInit" : true,
+        "isStatic" : false,
+        "available" : "",
+        "isMethod" : true,
+        "isOperator" : false,
+        "signature" : "public init?(_ description: String)",
+        "callName" : "init?",
+        "isThrowing" : false,
+        "parameters" : [
+          {
+            "externalLabel" : "_",
+            "internalName" : "description"
+          }
+        ]
+      }
+    ],
+    "associatedTypes" : [
+
+    ],
+    "protocolName" : "LosslessStringConvertible"
+  },
+  {
+    "items" : [
+      {
+        "isInit" : false,
+        "isStatic" : false,
+        "available" : "",
+        "isMethod" : false,
+        "isOperator" : false,
+        "signature" : "public var _boxID: ObjectIdentifier",
+        "callName" : "_boxID",
+        "isThrowing" : false,
+        "parameters" : [
+
+        ]
+      }
+    ],
+    "associatedTypes" : [
+      "Element",
+      "Index",
+      "Indices",
+      "Iterator",
+      "Iterator.Element",
+      "OtherSequence.Element",
+      "PossiblePrefix.Element",
+      "R",
+      "R.Bound",
+      "SegmentOfResult.Element",
+      "Self",
+      "SubSequence",
+      "UnboundedRange"
+    ],
+    "protocolName" : "_AnyCollectionProtocol"
+  },
+  {
+    "items" : [
+      {
+        "isInit" : false,
+        "isStatic" : false,
+        "available" : "",
+        "isMethod" : false,
+        "isOperator" : false,
+        "signature" : "public var _cVarArgAlignment: Int",
+        "callName" : "_cVarArgAlignment",
+        "isThrowing" : false,
+        "parameters" : [
+
+        ]
+      }
+    ],
+    "associatedTypes" : [
+
+    ],
+    "protocolName" : "_CVarArgAligned"
+  },
+  {
+    "items" : [
+      {
+        "isInit" : false,
+        "isStatic" : false,
+        "available" : "",
+        "isMethod" : false,
+        "isOperator" : false,
+        "signature" : "public var customPlaygroundQuickLook: _PlaygroundQuickLook",
+        "callName" : "customPlaygroundQuickLook",
+        "isThrowing" : false,
+        "parameters" : [
+
+        ]
+      }
+    ],
+    "associatedTypes" : [
+
+    ],
+    "protocolName" : "_CustomPlaygroundQuickLookable"
+  },
+  {
+    "items" : [
+      {
+        "isInit" : false,
+        "isStatic" : false,
+        "available" : "",
+        "isMethod" : false,
+        "isOperator" : false,
+        "signature" : "public var _defaultCustomPlaygroundQuickLook: _PlaygroundQuickLook",
+        "callName" : "_defaultCustomPlaygroundQuickLook",
+        "isThrowing" : false,
+        "parameters" : [
+
+        ]
+      }
+    ],
+    "associatedTypes" : [
+
+    ],
+    "protocolName" : "__DefaultCustomPlaygroundQuickLookable"
+  }
+]

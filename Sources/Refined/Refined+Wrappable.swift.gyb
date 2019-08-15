@@ -1,0 +1,16 @@
+% import json
+% source = '../../Resources/Wrappable.json'
+% warning = 'Generated with gyb. Do not edit.'
+// ${warning}
+
+import Wrapper
+% with open(source) as file:
+%   for wrappable in json.load(file):
+%     protocol = wrappable['protocolName']
+%     if len(wrappable['associatedTypes']) == 0 or (len(wrappable['associatedTypes']) == 1 and wrappable['associatedTypes'][0] == 'Self'):
+
+/// Refined + ${protocol} extension.
+extension Refined: ${protocol} where WrappedValue: ${protocol} {}
+%     end
+%   end
+% end
