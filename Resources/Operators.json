@@ -1,0 +1,658 @@
+[
+  {
+    "returnType" : "Self",
+    "available" : "",
+    "types" : [
+      "Double",
+      "Float",
+      "Float80",
+      "Int",
+      "Int16",
+      "Int32",
+      "Int64",
+      "Int8",
+      "UInt",
+      "UInt16",
+      "UInt32",
+      "UInt64",
+      "UInt8"
+    ],
+    "callName" : "-",
+    "signature" : "static func - (_ lhs: Self, _ rhs: Self) -> Self",
+    "matchingProtocols" : [
+
+    ],
+    "featureType" : "operator",
+    "protocols" : [
+      "AdditiveArithmetic",
+      "BinaryInteger",
+      "FloatingPoint"
+    ],
+    "featureName" : "SubtractionCompatible"
+  },
+  {
+    "returnType" : "Self",
+    "available" : "",
+    "types" : [
+      "SIMDMask"
+    ],
+    "callName" : ".!",
+    "signature" : "static prefix func .! (_ lhs: Self) -> Self",
+    "matchingProtocols" : [
+
+    ],
+    "featureType" : "operator",
+    "protocols" : [
+
+    ],
+    "featureName" : "PointwiseNOTCompatible"
+  },
+  {
+    "returnType" : "Self",
+    "available" : "",
+    "types" : [
+      "SIMDMask"
+    ],
+    "callName" : ".^",
+    "signature" : "static func .^ (_ lhs: Self, _ rhs: Self) -> Self",
+    "matchingProtocols" : [
+
+    ],
+    "featureType" : "operator",
+    "protocols" : [
+
+    ],
+    "featureName" : "PointwiseBitwiseXORCompatible"
+  },
+  {
+    "returnType" : "Self",
+    "available" : "",
+    "types" : [
+      "SIMDMask"
+    ],
+    "callName" : ".|",
+    "signature" : "static func .| (_ lhs: Self, _ rhs: Self) -> Self",
+    "matchingProtocols" : [
+
+    ],
+    "featureType" : "operator",
+    "protocols" : [
+
+    ],
+    "featureName" : "PointwiseBitwiseORCompatible"
+  },
+  {
+    "returnType" : "Self",
+    "available" : "",
+    "types" : [
+      "SIMDMask"
+    ],
+    "callName" : ".&",
+    "signature" : "static func .& (_ lhs: Self, _ rhs: Self) -> Self",
+    "matchingProtocols" : [
+
+    ],
+    "featureType" : "operator",
+    "protocols" : [
+
+    ],
+    "featureName" : "PointwiseBitwiseANDCompatible"
+  },
+  {
+    "returnType" : "Self",
+    "available" : "",
+    "types" : [
+      "Int",
+      "Int16",
+      "Int32",
+      "Int64",
+      "Int8",
+      "UInt",
+      "UInt16",
+      "UInt32",
+      "UInt64",
+      "UInt8"
+    ],
+    "callName" : "&>>",
+    "signature" : "static func &>> (_ lhs: Self, _ rhs: Self) -> Self",
+    "matchingProtocols" : [
+
+    ],
+    "featureType" : "operator",
+    "protocols" : [
+      "FixedWidthInteger"
+    ],
+    "featureName" : "OverflowRightShiftCompatible"
+  },
+  {
+    "returnType" : "Self",
+    "available" : "",
+    "types" : [
+      "Int",
+      "Int16",
+      "Int32",
+      "Int64",
+      "Int8",
+      "UInt",
+      "UInt16",
+      "UInt32",
+      "UInt64",
+      "UInt8"
+    ],
+    "callName" : "&<<",
+    "signature" : "static func &<< (_ lhs: Self, _ rhs: Self) -> Self",
+    "matchingProtocols" : [
+
+    ],
+    "featureType" : "operator",
+    "protocols" : [
+      "FixedWidthInteger"
+    ],
+    "featureName" : "OverflowLeftShiftCompatible"
+  },
+  {
+    "returnType" : "Bool",
+    "available" : "",
+    "types" : [
+      "Bool"
+    ],
+    "callName" : "!",
+    "signature" : "static prefix func ! (_ lhs: Self) -> Bool",
+    "matchingProtocols" : [
+
+    ],
+    "featureType" : "operator",
+    "protocols" : [
+
+    ],
+    "featureName" : "NOTCompatible"
+  },
+  {
+    "returnType" : "Self",
+    "available" : "",
+    "types" : [
+      "Double",
+      "Float",
+      "Float80",
+      "Int",
+      "Int16",
+      "Int32",
+      "Int64",
+      "Int8",
+      "UInt",
+      "UInt16",
+      "UInt32",
+      "UInt64",
+      "UInt8"
+    ],
+    "callName" : "*",
+    "signature" : "static func * (_ lhs: Self, _ rhs: Self) -> Self",
+    "matchingProtocols" : [
+
+    ],
+    "featureType" : "operator",
+    "protocols" : [
+      "BinaryInteger",
+      "FloatingPoint",
+      "Numeric"
+    ],
+    "featureName" : "MultiplicationCompatible"
+  },
+  {
+    "returnType" : "Self",
+    "available" : "",
+    "types" : [
+      "Int",
+      "Int16",
+      "Int32",
+      "Int64",
+      "Int8",
+      "UInt",
+      "UInt16",
+      "UInt32",
+      "UInt64",
+      "UInt8"
+    ],
+    "callName" : "%",
+    "signature" : "static func % (_ lhs: Self, _ rhs: Self) -> Self",
+    "matchingProtocols" : [
+
+    ],
+    "featureType" : "operator",
+    "protocols" : [
+      "BinaryInteger"
+    ],
+    "featureName" : "ModuloCompatible"
+  },
+  {
+    "returnType" : "Self",
+    "available" : "",
+    "types" : [
+      "Double",
+      "Float",
+      "Float80"
+    ],
+    "callName" : "-",
+    "signature" : "static prefix func - (_ lhs: Self) -> Self",
+    "matchingProtocols" : [
+
+    ],
+    "featureType" : "operator",
+    "protocols" : [
+
+    ],
+    "featureName" : "MinusCompatible"
+  },
+  {
+    "returnType" : "Bool",
+    "available" : "",
+    "types" : [
+      "AnyIndex",
+      "AutoreleasingUnsafeMutablePointer",
+      "Character",
+      "ClosedRange.Index",
+      "Dictionary.Index",
+      "Double",
+      "FlattenSequence.Index",
+      "Float",
+      "Float80",
+      "Int",
+      "Int16",
+      "Int32",
+      "Int64",
+      "Int8",
+      "Never",
+      "ObjectIdentifier",
+      "ReversedCollection.Index",
+      "Set.Index",
+      "String",
+      "String.Index",
+      "Substring",
+      "UInt",
+      "UInt16",
+      "UInt32",
+      "UInt64",
+      "UInt8",
+      "Unicode.CanonicalCombiningClass",
+      "Unicode.Scalar",
+      "UnsafeMutablePointer",
+      "UnsafeMutableRawPointer",
+      "UnsafePointer",
+      "UnsafeRawPointer"
+    ],
+    "callName" : "<=",
+    "signature" : "static func <= (_ lhs: Self, _ rhs: Self) -> Bool",
+    "matchingProtocols" : [
+
+    ],
+    "featureType" : "operator",
+    "protocols" : [
+      "Comparable"
+    ],
+    "featureName" : "LessEqualCompatible"
+  },
+  {
+    "returnType" : "Bool",
+    "available" : "",
+    "types" : [
+      "AnyIndex",
+      "AutoreleasingUnsafeMutablePointer",
+      "Character",
+      "ClosedRange.Index",
+      "Dictionary.Index",
+      "Double",
+      "FlattenSequence.Index",
+      "Float",
+      "Float80",
+      "Int",
+      "Int16",
+      "Int32",
+      "Int64",
+      "Int8",
+      "Never",
+      "ObjectIdentifier",
+      "ReversedCollection.Index",
+      "Set.Index",
+      "String",
+      "String.Index",
+      "Substring",
+      "UInt",
+      "UInt16",
+      "UInt32",
+      "UInt64",
+      "UInt8",
+      "Unicode.CanonicalCombiningClass",
+      "Unicode.Scalar",
+      "UnsafeMutablePointer",
+      "UnsafeMutableRawPointer",
+      "UnsafePointer",
+      "UnsafeRawPointer"
+    ],
+    "callName" : "<",
+    "signature" : "static func < (_ lhs: Self, _ rhs: Self) -> Bool",
+    "matchingProtocols" : [
+
+    ],
+    "featureType" : "operator",
+    "protocols" : [
+      "Comparable"
+    ],
+    "featureName" : "LessCompatible"
+  },
+  {
+    "returnType" : "Bool",
+    "available" : "",
+    "types" : [
+      "AnyIndex",
+      "AutoreleasingUnsafeMutablePointer",
+      "Character",
+      "ClosedRange.Index",
+      "Dictionary.Index",
+      "Double",
+      "FlattenSequence.Index",
+      "Float",
+      "Float80",
+      "Int",
+      "Int16",
+      "Int32",
+      "Int64",
+      "Int8",
+      "Never",
+      "ObjectIdentifier",
+      "ReversedCollection.Index",
+      "Set.Index",
+      "String",
+      "String.Index",
+      "Substring",
+      "UInt",
+      "UInt16",
+      "UInt32",
+      "UInt64",
+      "UInt8",
+      "Unicode.CanonicalCombiningClass",
+      "Unicode.Scalar",
+      "UnsafeMutablePointer",
+      "UnsafeMutableRawPointer",
+      "UnsafePointer",
+      "UnsafeRawPointer"
+    ],
+    "callName" : ">=",
+    "signature" : "static func >= (_ lhs: Self, _ rhs: Self) -> Bool",
+    "matchingProtocols" : [
+
+    ],
+    "featureType" : "operator",
+    "protocols" : [
+      "Comparable"
+    ],
+    "featureName" : "GreaterEqualCompatible"
+  },
+  {
+    "returnType" : "Bool",
+    "available" : "",
+    "types" : [
+      "AnyIndex",
+      "AutoreleasingUnsafeMutablePointer",
+      "Character",
+      "ClosedRange.Index",
+      "Dictionary.Index",
+      "Double",
+      "FlattenSequence.Index",
+      "Float",
+      "Float80",
+      "Int",
+      "Int16",
+      "Int32",
+      "Int64",
+      "Int8",
+      "Never",
+      "ObjectIdentifier",
+      "ReversedCollection.Index",
+      "Set.Index",
+      "String",
+      "String.Index",
+      "Substring",
+      "UInt",
+      "UInt16",
+      "UInt32",
+      "UInt64",
+      "UInt8",
+      "Unicode.CanonicalCombiningClass",
+      "Unicode.Scalar",
+      "UnsafeMutablePointer",
+      "UnsafeMutableRawPointer",
+      "UnsafePointer",
+      "UnsafeRawPointer"
+    ],
+    "callName" : ">",
+    "signature" : "static func > (_ lhs: Self, _ rhs: Self) -> Bool",
+    "matchingProtocols" : [
+
+    ],
+    "featureType" : "operator",
+    "protocols" : [
+      "Comparable"
+    ],
+    "featureName" : "GreaterCompatible"
+  },
+  {
+    "returnType" : "Bool",
+    "available" : "",
+    "types" : [
+      "AnyHashable",
+      "AnyIndex",
+      "AnyKeyPath",
+      "Array",
+      "ArraySlice",
+      "AutoreleasingUnsafeMutablePointer",
+      "Bool",
+      "Character",
+      "ClosedRange",
+      "ClosedRange.Index",
+      "CodingUserInfoKey",
+      "ComputedPropertyID",
+      "ContiguousArray",
+      "Dictionary",
+      "Dictionary.Index",
+      "Dictionary.Keys",
+      "Double",
+      "EmptyCollection",
+      "FlattenSequence.Index",
+      "Float",
+      "Float80",
+      "FloatingPointSign",
+      "Int",
+      "Int16",
+      "Int32",
+      "Int64",
+      "Int8",
+      "KeyPathComponent",
+      "ManagedBufferPointer",
+      "Never",
+      "ObjectIdentifier",
+      "OpaquePointer",
+      "Optional",
+      "Range",
+      "Result",
+      "ReversedCollection.Index",
+      "SIMD16",
+      "SIMD2",
+      "SIMD3",
+      "SIMD32",
+      "SIMD4",
+      "SIMD64",
+      "SIMD8",
+      "SIMDMask",
+      "Set",
+      "Set.Index",
+      "String",
+      "String.Index",
+      "Substring",
+      "UInt",
+      "UInt16",
+      "UInt32",
+      "UInt64",
+      "UInt8",
+      "UTF8ExtraInfo",
+      "UTF8ValidationResult",
+      "Unicode.CanonicalCombiningClass",
+      "Unicode.Scalar",
+      "UnicodeDecodingResult",
+      "UnsafeMutablePointer",
+      "UnsafeMutableRawPointer",
+      "UnsafePointer",
+      "UnsafeRawPointer"
+    ],
+    "callName" : "==",
+    "signature" : "static func == (_ lhs: Self, _ rhs: Self) -> Bool",
+    "matchingProtocols" : [
+
+    ],
+    "featureType" : "operator",
+    "protocols" : [
+      "Equatable"
+    ],
+    "featureName" : "EqualCompatible"
+  },
+  {
+    "returnType" : "Self",
+    "available" : "",
+    "types" : [
+      "Double",
+      "Float",
+      "Float80",
+      "Int",
+      "Int16",
+      "Int32",
+      "Int64",
+      "Int8",
+      "UInt",
+      "UInt16",
+      "UInt32",
+      "UInt64",
+      "UInt8"
+    ],
+    "callName" : "/",
+    "signature" : "static func / (_ lhs: Self, _ rhs: Self) -> Self",
+    "matchingProtocols" : [
+
+    ],
+    "featureTypfe" : "operator",
+    "protocols" : [
+      "BinaryInteger",
+      "FloatingPoint"
+    ],
+    "featureName" : "DivisionCompatible"
+  },
+  {
+    "returnType" : "Self",
+    "available" : "",
+    "types" : [
+      "Int",
+      "Int16",
+      "Int32",
+      "Int64",
+      "Int8",
+      "UInt",
+      "UInt16",
+      "UInt32",
+      "UInt64",
+      "UInt8"
+    ],
+    "callName" : "^",
+    "signature" : "static func ^ (_ lhs: Self, _ rhs: Self) -> Self",
+    "matchingProtocols" : [
+
+    ],
+    "featureType" : "operator",
+    "protocols" : [
+      "BinaryInteger"
+    ],
+    "featureName" : "BitwiseXORCompatible"
+  },
+  {
+    "returnType" : "Self",
+    "available" : "",
+    "types" : [
+      "Int",
+      "Int16",
+      "Int32",
+      "Int64",
+      "Int8",
+      "UInt",
+      "UInt16",
+      "UInt32",
+      "UInt64",
+      "UInt8"
+    ],
+    "callName" : "|",
+    "signature" : "static func | (_ lhs: Self, _ rhs: Self) -> Self",
+    "matchingProtocols" : [
+
+    ],
+    "featureType" : "operator",
+    "protocols" : [
+      "BinaryInteger"
+    ],
+    "featureName" : "BitwiseORCompatible"
+  },
+  {
+    "returnType" : "Self",
+    "available" : "",
+    "types" : [
+      "Int",
+      "Int16",
+      "Int32",
+      "Int64",
+      "Int8",
+      "UInt",
+      "UInt16",
+      "UInt32",
+      "UInt64",
+      "UInt8"
+    ],
+    "callName" : "&",
+    "signature" : "static func & (_ lhs: Self, _ rhs: Self) -> Self",
+    "matchingProtocols" : [
+
+    ],
+    "featureType" : "operator",
+    "protocols" : [
+      "BinaryInteger"
+    ],
+    "featureName" : "BitwiseANDCompatible"
+  },
+  {
+    "returnType" : "Self",
+    "available" : "",
+    "types" : [
+      "Array",
+      "Double",
+      "Float",
+      "Float80",
+      "Int",
+      "Int16",
+      "Int32",
+      "Int64",
+      "Int8",
+      "String",
+      "UInt",
+      "UInt16",
+      "UInt32",
+      "UInt64",
+      "UInt8"
+    ],
+    "callName" : "+",
+    "signature" : "static func + (_ lhs: Self, _ rhs: Self) -> Self",
+    "matchingProtocols" : [
+
+    ],
+    "featureType" : "operator",
+    "protocols" : [
+      "AdditiveArithmetic",
+      "BinaryInteger",
+      "FloatingPoint"
+    ],
+    "featureName" : "AdditionCompatible"
+  }
+]

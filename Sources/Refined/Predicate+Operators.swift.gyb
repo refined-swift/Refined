@@ -1,0 +1,43 @@
+% import json
+% source = '../../Resources/Operators.json'
+% warning = 'Generated with gyb. Do not edit.'
+// ${warning}
+public struct Equal<D>: Predicate where D: PredicateValue {
+@available(*, unavailable)
+private init() {}
+
+public static func isValid(value lhs: D.Value) -> Bool {
+return lhs == D.value
+}
+}
+import Wrapper
+% with open(source) as file:
+%   for wrappable in json.load(file):
+%     protocol = wrappable['featureName']
+# TODO: @hectr !!!!!!!!!!!!!!
+%     docName =
+%     predicate =
+%     callName =
+%     attribute =
+
+/// Predicate that checks if value is ${docName}.
+${attribute}public struct ${predicate}<V: Predicate>: Predicate where V.Value: ${protocol} {
+    @available(*, unavailable)
+    private init() {}
+
+    public static func isValid(value lhs: V.Value) -> Bool {
+        return lhs ${callName} V.value
+    }
+}
+
+/// Refined's internal typealias of ${predicate}.
+${attribute}public typealias _${predicate}Predicate = ${predicate}
+
+/// ${predicate} DSL extension.
+${attribute}extension ${protocol} {
+    public typealias ${predicate} = Refined<_${predicate}Predicate<Self>>
+    public typealias Non${predicate} = Refined<_${predicate}Predicate<Self>>._Not
+}
+%     end
+%   end
+% end
