@@ -3,11 +3,11 @@ import Refined
 
 final class RefinedTests: XCTestCase {
     func testRefinedThrowingInitCanSucceed() {
-        XCTAssertNoThrow(try Refined<IsTruePredicate>(wrapping: true))
+        XCTAssertNoThrow(try Refined<IsTruePredicate>(refining: true))
     }
 
     func testRefinedThrowingInitCanThrow() {
-        XCTAssertThrowsError(try Refined<IsTruePredicate>(wrapping: false))
+        XCTAssertThrowsError(try Refined<IsTruePredicate>(refining: false))
     }
 
     func testRefinedFailableInitCanSucceed() {
