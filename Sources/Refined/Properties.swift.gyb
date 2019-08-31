@@ -17,7 +17,7 @@ import Wrapper
 
 // MARK: - ${predicate}
 
-/// Refined + ${protocol} extension.
+/// `Refined` + `${protocol}` extension.
 extension Refined: ${protocol} where WrappedValue: ${protocol} {}
 
 /// Predicate that checks if value's ${callName} satisfies generic constraint.
@@ -33,17 +33,17 @@ ${attribute}public struct ${predicate}<V: ${protocol}, C: ${constraint}>: Predic
 /// Refined's internal typealias of ${predicate}.
 ${attribute}public typealias _${predicate}Predicate = ${predicate}
 
-/// ${predicate} DSL extension.
+/// `${predicate}` DSL extension.
 ${attribute}extension ${protocol} {
     public typealias ${predicate}<T: ${constraint}> = Refined<_${predicate}Predicate<Self, T>> where T.Value == ${value}
 }
 
-/// And + ${predicate} DSL extension.
+/// `And` + `${predicate}` DSL extension.
 ${attribute}extension Refined.And where Refined.Value: ${protocol} {
     public typealias ${predicate}<T: ${constraint}> = Refined._And<_${predicate}Predicate<Refined.Value, T>> where T.Value == ${value}
 }
 
-/// Or + ${predicate} DSL extension.
+/// `Or` + `${predicate}` DSL extension.
 ${attribute}extension Refined.Or where Refined.Value: ${protocol} {
     public typealias ${predicate}<T: ${constraint}> = Refined._Or<_${predicate}Predicate<Refined.Value, T>> where T.Value == ${value}
 }

@@ -9,7 +9,7 @@ import Wrapper
 %     protocol = wrappable['protocolName']
 %     if len(wrappable['associatedTypes']) == 0 or (len(wrappable['associatedTypes']) == 1 and wrappable['associatedTypes'][0] == 'Self'):
 
-/// Refined + ${protocol} extension.
+/// `Refined` + `${protocol}` extension.
 extension Refined: ${protocol} where WrappedValue: ${protocol} {}
 %     end
 %   end
