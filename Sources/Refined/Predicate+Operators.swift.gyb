@@ -19,6 +19,9 @@ import Wrapper
 
 // MARK: - ${predicate}
 
+/// `Refined` + `${protocol}` extension.
+extension Refined: ${protocol} where WrappedValue: ${protocol} {}
+
 /// Predicate that checks if a value is *${docName}* compared to `PredicateValue`.
 ${attribute}public struct ${predicate}<V: PredicateValue>: Predicate where V.Value: ${protocol} {
     @available(*, unavailable)

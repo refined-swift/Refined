@@ -4,6 +4,9 @@ import Wrapper
 
 // MARK: - LessEqual
 
+/// `Refined` + `LessEqualCompatible` extension.
+extension Refined: LessEqualCompatible where WrappedValue: LessEqualCompatible {}
+
 /// Predicate that checks if a value is *lessEqual* compared to `PredicateValue`.
 public struct LessEqual<V: PredicateValue>: Predicate where V.Value: LessEqualCompatible {
     @available(*, unavailable)
@@ -33,6 +36,9 @@ extension Refined.Or where Refined.Value: LessEqualCompatible {
 }
 
 // MARK: - Less
+
+/// `Refined` + `LessCompatible` extension.
+extension Refined: LessCompatible where WrappedValue: LessCompatible {}
 
 /// Predicate that checks if a value is *less* compared to `PredicateValue`.
 public struct Less<V: PredicateValue>: Predicate where V.Value: LessCompatible {
@@ -64,6 +70,9 @@ extension Refined.Or where Refined.Value: LessCompatible {
 
 // MARK: - GreaterEqual
 
+/// `Refined` + `GreaterEqualCompatible` extension.
+extension Refined: GreaterEqualCompatible where WrappedValue: GreaterEqualCompatible {}
+
 /// Predicate that checks if a value is *greaterEqual* compared to `PredicateValue`.
 public struct GreaterEqual<V: PredicateValue>: Predicate where V.Value: GreaterEqualCompatible {
     @available(*, unavailable)
@@ -94,6 +103,9 @@ extension Refined.Or where Refined.Value: GreaterEqualCompatible {
 
 // MARK: - Greater
 
+/// `Refined` + `GreaterCompatible` extension.
+extension Refined: GreaterCompatible where WrappedValue: GreaterCompatible {}
+
 /// Predicate that checks if a value is *greater* compared to `PredicateValue`.
 public struct Greater<V: PredicateValue>: Predicate where V.Value: GreaterCompatible {
     @available(*, unavailable)
@@ -123,6 +135,9 @@ extension Refined.Or where Refined.Value: GreaterCompatible {
 }
 
 // MARK: - Equal
+
+/// `Refined` + `EqualCompatible` extension.
+extension Refined: EqualCompatible where WrappedValue: EqualCompatible {}
 
 /// Predicate that checks if a value is *equal* compared to `PredicateValue`.
 public struct Equal<V: PredicateValue>: Predicate where V.Value: EqualCompatible {
