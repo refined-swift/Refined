@@ -1,6 +1,6 @@
 import XCTest
-import Refined
 import Wrapper
+import Refined
 
 final class OperatorsTests: XCTestCase {
     func testStringEqual() {

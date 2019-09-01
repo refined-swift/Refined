@@ -3,6 +3,7 @@
 % warning = 'Generated with gyb. Do not edit.'
 // ${warning}
 
+import Features
 import Wrapper
 % with open(source) as file:
 %   for feature in json.load(file):

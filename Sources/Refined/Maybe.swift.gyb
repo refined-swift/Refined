@@ -4,6 +4,7 @@
 // ${warning}
 
 import Features
+import Wrapper
 % with open(source) as file:
 %   for feature in json.load(file):
 %     protocol = feature['featureName']
