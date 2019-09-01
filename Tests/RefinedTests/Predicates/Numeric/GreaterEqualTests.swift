@@ -3,7 +3,7 @@ import Refined
 
 final class GreaterEqualTests: XCTestCase {
     func testGreaterEqualCanBeValid() {
-        XCTAssertNotNil(Int.GreaterEqual<One>.And.GreaterEqual<One>(1))
+        XCTAssertNotNil(Int.GreaterEqual<One>.and.GreaterEqual<One>(1))
         XCTAssertNotNil(Refined<GreaterEqual<Four>>(6))
         XCTAssertNotNil(Int.GreaterEqual<Four>.Or.GreaterEqual<One>(4))
         XCTAssertNotNil(Double.GreaterEqual<TwoDotFive>(3.6))
@@ -11,7 +11,7 @@ final class GreaterEqualTests: XCTestCase {
 
     func testGreaterEqualCanBeInvalid() {
         XCTAssertNil(Refined<GreaterEqual<Three>>(2))
-        XCTAssertNil(Int.GreaterEqual<Four>.And.GreaterEqual<Three>(3))
+        XCTAssertNil(Int.GreaterEqual<Four>.and.GreaterEqual<Three>(3))
         XCTAssertNil(Double.GreaterEqual<TwoDotFive>(0))
     }
 

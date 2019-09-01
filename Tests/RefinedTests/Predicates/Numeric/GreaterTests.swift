@@ -11,7 +11,7 @@ final class GreaterTests: XCTestCase {
 
     func testGreaterCanBeInvalid() {
         XCTAssertNil(Refined<Greater<Three>>(3))
-        XCTAssertNil(Int.Greater<Four>.And.Greater<Three>(4))
+        XCTAssertNil(Int.Greater<Four>.and.Greater<Three>(4))
         XCTAssertNil(Double.Greater<TwoDotFive>(-1.5))
     }
 

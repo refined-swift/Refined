@@ -11,7 +11,7 @@ final class EqualTests: XCTestCase {
 
     func testEqualCanBeInvalid() {
         XCTAssertNil(Refined<Equal<Three>>(4))
-        XCTAssertNil(Int.Equal<Four>.And.Equal<Three>(3))
+        XCTAssertNil(Int.Equal<Four>.and.Equal<Three>(3))
         XCTAssertNil(Double.Equal<TwoDotFive>(3))
     }
 

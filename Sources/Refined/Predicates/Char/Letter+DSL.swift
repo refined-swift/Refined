@@ -6,7 +6,7 @@ extension MaybeLetter where Self: MaybeNumber {
 }
 
 /// And + Alphanumeric DSL extension.
-extension Refined.And where Refined.Value: MaybeLetter & MaybeNumber  {
+extension Refined.and where Refined.Value: MaybeLetter & MaybeNumber  {
     public typealias Alphanumeric = Refined._And<Letter.Or.Number>
 }
 

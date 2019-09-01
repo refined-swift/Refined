@@ -11,7 +11,7 @@ final class LessTests: XCTestCase {
 
     func testLessCanBeInvalid() {
         XCTAssertNil(Refined<Less<Three>>(4))
-        XCTAssertNil(Int.Less<Four>.And.Less<Three>(3))
+        XCTAssertNil(Int.Less<Four>.and.Less<Three>(3))
         XCTAssertNil(Double.Less<TwoDotFive>(3))
     }
 

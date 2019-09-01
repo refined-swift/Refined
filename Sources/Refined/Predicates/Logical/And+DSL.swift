@@ -5,7 +5,7 @@ public typealias _AndPredicate = And
 
 /// And DSL extension.
 extension Refined {    
-    public struct And: Predicate {
+    public struct and: Predicate {
         @available(*, unavailable)
         private init() {}
         

@@ -27,7 +27,7 @@ extension LessEqualCompatible {
 }
 
 /// `And` + `LessEqual` DSL extension.
-extension Refined.And where Refined.Value: LessEqualCompatible {
+extension Refined.and where Refined.Value: LessEqualCompatible {
     public typealias LessEqual<T: PredicateValue> = Refined._And<_LessEqualPredicate<T>> where T.Value == Refined.Value
 }
 
@@ -60,7 +60,7 @@ extension LessCompatible {
 }
 
 /// `And` + `Less` DSL extension.
-extension Refined.And where Refined.Value: LessCompatible {
+extension Refined.and where Refined.Value: LessCompatible {
     public typealias Less<T: PredicateValue> = Refined._And<_LessPredicate<T>> where T.Value == Refined.Value
 }
 
@@ -93,7 +93,7 @@ extension GreaterEqualCompatible {
 }
 
 /// `And` + `GreaterEqual` DSL extension.
-extension Refined.And where Refined.Value: GreaterEqualCompatible {
+extension Refined.and where Refined.Value: GreaterEqualCompatible {
     public typealias GreaterEqual<T: PredicateValue> = Refined._And<_GreaterEqualPredicate<T>> where T.Value == Refined.Value
 }
 
@@ -126,7 +126,7 @@ extension GreaterCompatible {
 }
 
 /// `And` + `Greater` DSL extension.
-extension Refined.And where Refined.Value: GreaterCompatible {
+extension Refined.and where Refined.Value: GreaterCompatible {
     public typealias Greater<T: PredicateValue> = Refined._And<_GreaterPredicate<T>> where T.Value == Refined.Value
 }
 
@@ -159,7 +159,7 @@ extension EqualCompatible {
 }
 
 /// `And` + `Equal` DSL extension.
-extension Refined.And where Refined.Value: EqualCompatible {
+extension Refined.and where Refined.Value: EqualCompatible {
     public typealias Equal<T: PredicateValue> = Refined._And<_EqualPredicate<T>> where T.Value == Refined.Value
 }
 
