@@ -5,7 +5,7 @@ final class LessEqualTests: XCTestCase {
     func testLessEqualCanBeValid() {
         XCTAssertNotNil(Int.LessEqual<One>.and.LessEqual<One>(1))
         XCTAssertNotNil(Refined<LessEqual<Four>>(4))
-        XCTAssertNotNil(Int.LessEqual<Four>.Or.LessEqual<One>(-3))
+        XCTAssertNotNil(Int.LessEqual<Four>.or.LessEqual<One>(-3))
         XCTAssertNotNil(Double.LessEqual<TwoDotFive>(0.5))
     }
 

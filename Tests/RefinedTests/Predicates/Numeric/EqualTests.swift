@@ -3,9 +3,9 @@ import Refined
 
 final class EqualTests: XCTestCase {
     func testEqualCanBeValid() {
-        XCTAssertNotNil(Int.Equal<One>.Or.Equal<Four>(1))
+        XCTAssertNotNil(Int.Equal<One>.or.Equal<Four>(1))
         XCTAssertNotNil(Refined<Equal<Four>>(4))
-        XCTAssertNotNil(Int.Equal<Four>.Or.Equal<One>(4))
+        XCTAssertNotNil(Int.Equal<Four>.or.Equal<One>(4))
         XCTAssertNotNil(Double.Equal<TwoDotFive>(2.5))
     }
 

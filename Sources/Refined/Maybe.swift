@@ -34,7 +34,7 @@ extension Refined.and where Refined.Value: MaybeZero {
 }
 
 /// `Or` + `Zero` DSL extension.
-extension Refined.Or where Refined.Value: MaybeZero {
+extension Refined.or where Refined.Value: MaybeZero {
     public typealias Zero = Refined._Or<_ZeroPredicate<Refined.Value>>
     public typealias NonZero = Refined._Or<Zero._Not>
 }
@@ -70,7 +70,7 @@ extension Refined.and where Refined.Value: MaybeXidstart {
 }
 
 /// `Or` + `Xidstart` DSL extension.
-extension Refined.Or where Refined.Value: MaybeXidstart {
+extension Refined.or where Refined.Value: MaybeXidstart {
     public typealias Xidstart = Refined._Or<_XidstartPredicate<Refined.Value>>
     public typealias NonXidstart = Refined._Or<Xidstart._Not>
 }
@@ -106,7 +106,7 @@ extension Refined.and where Refined.Value: MaybeXidcontinue {
 }
 
 /// `Or` + `Xidcontinue` DSL extension.
-extension Refined.Or where Refined.Value: MaybeXidcontinue {
+extension Refined.or where Refined.Value: MaybeXidcontinue {
     public typealias Xidcontinue = Refined._Or<_XidcontinuePredicate<Refined.Value>>
     public typealias NonXidcontinue = Refined._Or<Xidcontinue._Not>
 }
@@ -142,7 +142,7 @@ extension Refined.and where Refined.Value: MaybeWholeNumber {
 }
 
 /// `Or` + `WholeNumber` DSL extension.
-extension Refined.Or where Refined.Value: MaybeWholeNumber {
+extension Refined.or where Refined.Value: MaybeWholeNumber {
     public typealias WholeNumber = Refined._Or<_WholeNumberPredicate<Refined.Value>>
     public typealias NonWholeNumber = Refined._Or<WholeNumber._Not>
 }
@@ -178,7 +178,7 @@ extension Refined.and where Refined.Value: MaybeWhitespace {
 }
 
 /// `Or` + `Whitespace` DSL extension.
-extension Refined.Or where Refined.Value: MaybeWhitespace {
+extension Refined.or where Refined.Value: MaybeWhitespace {
     public typealias Whitespace = Refined._Or<_WhitespacePredicate<Refined.Value>>
     public typealias NonWhitespace = Refined._Or<Whitespace._Not>
 }
@@ -214,7 +214,7 @@ extension Refined.and where Refined.Value: MaybeVariationSelector {
 }
 
 /// `Or` + `VariationSelector` DSL extension.
-extension Refined.Or where Refined.Value: MaybeVariationSelector {
+extension Refined.or where Refined.Value: MaybeVariationSelector {
     public typealias VariationSelector = Refined._Or<_VariationSelectorPredicate<Refined.Value>>
     public typealias NonVariationSelector = Refined._Or<VariationSelector._Not>
 }
@@ -250,7 +250,7 @@ extension Refined.and where Refined.Value: MaybeUppercase {
 }
 
 /// `Or` + `Uppercase` DSL extension.
-extension Refined.Or where Refined.Value: MaybeUppercase {
+extension Refined.or where Refined.Value: MaybeUppercase {
     public typealias Uppercase = Refined._Or<_UppercasePredicate<Refined.Value>>
     public typealias NonUppercase = Refined._Or<Uppercase._Not>
 }
@@ -286,7 +286,7 @@ extension Refined.and where Refined.Value: MaybeUnifiedIdeograph {
 }
 
 /// `Or` + `UnifiedIdeograph` DSL extension.
-extension Refined.Or where Refined.Value: MaybeUnifiedIdeograph {
+extension Refined.or where Refined.Value: MaybeUnifiedIdeograph {
     public typealias UnifiedIdeograph = Refined._Or<_UnifiedIdeographPredicate<Refined.Value>>
     public typealias NonUnifiedIdeograph = Refined._Or<UnifiedIdeograph._Not>
 }
@@ -322,7 +322,7 @@ extension Refined.and where Refined.Value: MaybeTerminalPunctuation {
 }
 
 /// `Or` + `TerminalPunctuation` DSL extension.
-extension Refined.Or where Refined.Value: MaybeTerminalPunctuation {
+extension Refined.or where Refined.Value: MaybeTerminalPunctuation {
     public typealias TerminalPunctuation = Refined._Or<_TerminalPunctuationPredicate<Refined.Value>>
     public typealias NonTerminalPunctuation = Refined._Or<TerminalPunctuation._Not>
 }
@@ -358,7 +358,7 @@ extension Refined.and where Refined.Value: MaybeSymbol {
 }
 
 /// `Or` + `Symbol` DSL extension.
-extension Refined.Or where Refined.Value: MaybeSymbol {
+extension Refined.or where Refined.Value: MaybeSymbol {
     public typealias Symbol = Refined._Or<_SymbolPredicate<Refined.Value>>
     public typealias NonSymbol = Refined._Or<Symbol._Not>
 }
@@ -394,7 +394,7 @@ extension Refined.and where Refined.Value: MaybeSubnormal {
 }
 
 /// `Or` + `Subnormal` DSL extension.
-extension Refined.Or where Refined.Value: MaybeSubnormal {
+extension Refined.or where Refined.Value: MaybeSubnormal {
     public typealias Subnormal = Refined._Or<_SubnormalPredicate<Refined.Value>>
     public typealias NonSubnormal = Refined._Or<Subnormal._Not>
 }
@@ -430,7 +430,7 @@ extension Refined.and where Refined.Value: MaybeSoftDotted {
 }
 
 /// `Or` + `SoftDotted` DSL extension.
-extension Refined.Or where Refined.Value: MaybeSoftDotted {
+extension Refined.or where Refined.Value: MaybeSoftDotted {
     public typealias SoftDotted = Refined._Or<_SoftDottedPredicate<Refined.Value>>
     public typealias NonSoftDotted = Refined._Or<SoftDotted._Not>
 }
@@ -466,7 +466,7 @@ extension Refined.and where Refined.Value: MaybeSignalingNaN {
 }
 
 /// `Or` + `SignalingNaN` DSL extension.
-extension Refined.Or where Refined.Value: MaybeSignalingNaN {
+extension Refined.or where Refined.Value: MaybeSignalingNaN {
     public typealias SignalingNaN = Refined._Or<_SignalingNaNPredicate<Refined.Value>>
     public typealias NonSignalingNaN = Refined._Or<SignalingNaN._Not>
 }
@@ -502,7 +502,7 @@ extension Refined.and where Refined.Value: MaybeSentenceTerminal {
 }
 
 /// `Or` + `SentenceTerminal` DSL extension.
-extension Refined.Or where Refined.Value: MaybeSentenceTerminal {
+extension Refined.or where Refined.Value: MaybeSentenceTerminal {
     public typealias SentenceTerminal = Refined._Or<_SentenceTerminalPredicate<Refined.Value>>
     public typealias NonSentenceTerminal = Refined._Or<SentenceTerminal._Not>
 }
@@ -538,7 +538,7 @@ extension Refined.and where Refined.Value: MaybeRadical {
 }
 
 /// `Or` + `Radical` DSL extension.
-extension Refined.Or where Refined.Value: MaybeRadical {
+extension Refined.or where Refined.Value: MaybeRadical {
     public typealias Radical = Refined._Or<_RadicalPredicate<Refined.Value>>
     public typealias NonRadical = Refined._Or<Radical._Not>
 }
@@ -574,7 +574,7 @@ extension Refined.and where Refined.Value: MaybeQuotationMark {
 }
 
 /// `Or` + `QuotationMark` DSL extension.
-extension Refined.Or where Refined.Value: MaybeQuotationMark {
+extension Refined.or where Refined.Value: MaybeQuotationMark {
     public typealias QuotationMark = Refined._Or<_QuotationMarkPredicate<Refined.Value>>
     public typealias NonQuotationMark = Refined._Or<QuotationMark._Not>
 }
@@ -610,7 +610,7 @@ extension Refined.and where Refined.Value: MaybePunctuation {
 }
 
 /// `Or` + `Punctuation` DSL extension.
-extension Refined.Or where Refined.Value: MaybePunctuation {
+extension Refined.or where Refined.Value: MaybePunctuation {
     public typealias Punctuation = Refined._Or<_PunctuationPredicate<Refined.Value>>
     public typealias NonPunctuation = Refined._Or<Punctuation._Not>
 }
@@ -646,7 +646,7 @@ extension Refined.and where Refined.Value: MaybePatternWhitespace {
 }
 
 /// `Or` + `PatternWhitespace` DSL extension.
-extension Refined.Or where Refined.Value: MaybePatternWhitespace {
+extension Refined.or where Refined.Value: MaybePatternWhitespace {
     public typealias PatternWhitespace = Refined._Or<_PatternWhitespacePredicate<Refined.Value>>
     public typealias NonPatternWhitespace = Refined._Or<PatternWhitespace._Not>
 }
@@ -682,7 +682,7 @@ extension Refined.and where Refined.Value: MaybePatternSyntax {
 }
 
 /// `Or` + `PatternSyntax` DSL extension.
-extension Refined.Or where Refined.Value: MaybePatternSyntax {
+extension Refined.or where Refined.Value: MaybePatternSyntax {
     public typealias PatternSyntax = Refined._Or<_PatternSyntaxPredicate<Refined.Value>>
     public typealias NonPatternSyntax = Refined._Or<PatternSyntax._Not>
 }
@@ -718,7 +718,7 @@ extension Refined.and where Refined.Value: MaybeNumber {
 }
 
 /// `Or` + `Number` DSL extension.
-extension Refined.Or where Refined.Value: MaybeNumber {
+extension Refined.or where Refined.Value: MaybeNumber {
     public typealias Number = Refined._Or<_NumberPredicate<Refined.Value>>
     public typealias NonNumber = Refined._Or<Number._Not>
 }
@@ -754,7 +754,7 @@ extension Refined.and where Refined.Value: MaybeNormal {
 }
 
 /// `Or` + `Normal` DSL extension.
-extension Refined.Or where Refined.Value: MaybeNormal {
+extension Refined.or where Refined.Value: MaybeNormal {
     public typealias Normal = Refined._Or<_NormalPredicate<Refined.Value>>
     public typealias NonNormal = Refined._Or<Normal._Not>
 }
@@ -790,7 +790,7 @@ extension Refined.and where Refined.Value: MaybeNoncharacterCodePoint {
 }
 
 /// `Or` + `NoncharacterCodePoint` DSL extension.
-extension Refined.Or where Refined.Value: MaybeNoncharacterCodePoint {
+extension Refined.or where Refined.Value: MaybeNoncharacterCodePoint {
     public typealias NoncharacterCodePoint = Refined._Or<_NoncharacterCodePointPredicate<Refined.Value>>
     public typealias NonNoncharacterCodePoint = Refined._Or<NoncharacterCodePoint._Not>
 }
@@ -826,7 +826,7 @@ extension Refined.and where Refined.Value: MaybeNewline {
 }
 
 /// `Or` + `Newline` DSL extension.
-extension Refined.Or where Refined.Value: MaybeNewline {
+extension Refined.or where Refined.Value: MaybeNewline {
     public typealias Newline = Refined._Or<_NewlinePredicate<Refined.Value>>
     public typealias NonNewline = Refined._Or<Newline._Not>
 }
@@ -862,7 +862,7 @@ extension Refined.and where Refined.Value: MaybeNaN {
 }
 
 /// `Or` + `NaN` DSL extension.
-extension Refined.Or where Refined.Value: MaybeNaN {
+extension Refined.or where Refined.Value: MaybeNaN {
     public typealias NaN = Refined._Or<_NaNPredicate<Refined.Value>>
     public typealias NonNaN = Refined._Or<NaN._Not>
 }
@@ -898,7 +898,7 @@ extension Refined.and where Refined.Value: MaybeMathSymbol {
 }
 
 /// `Or` + `MathSymbol` DSL extension.
-extension Refined.Or where Refined.Value: MaybeMathSymbol {
+extension Refined.or where Refined.Value: MaybeMathSymbol {
     public typealias MathSymbol = Refined._Or<_MathSymbolPredicate<Refined.Value>>
     public typealias NonMathSymbol = Refined._Or<MathSymbol._Not>
 }
@@ -934,7 +934,7 @@ extension Refined.and where Refined.Value: MaybeMath {
 }
 
 /// `Or` + `Math` DSL extension.
-extension Refined.Or where Refined.Value: MaybeMath {
+extension Refined.or where Refined.Value: MaybeMath {
     public typealias Math = Refined._Or<_MathPredicate<Refined.Value>>
     public typealias NonMath = Refined._Or<Math._Not>
 }
@@ -970,7 +970,7 @@ extension Refined.and where Refined.Value: MaybeLowercase {
 }
 
 /// `Or` + `Lowercase` DSL extension.
-extension Refined.Or where Refined.Value: MaybeLowercase {
+extension Refined.or where Refined.Value: MaybeLowercase {
     public typealias Lowercase = Refined._Or<_LowercasePredicate<Refined.Value>>
     public typealias NonLowercase = Refined._Or<Lowercase._Not>
 }
@@ -1006,7 +1006,7 @@ extension Refined.and where Refined.Value: MaybeLogicalOrderException {
 }
 
 /// `Or` + `LogicalOrderException` DSL extension.
-extension Refined.Or where Refined.Value: MaybeLogicalOrderException {
+extension Refined.or where Refined.Value: MaybeLogicalOrderException {
     public typealias LogicalOrderException = Refined._Or<_LogicalOrderExceptionPredicate<Refined.Value>>
     public typealias NonLogicalOrderException = Refined._Or<LogicalOrderException._Not>
 }
@@ -1042,7 +1042,7 @@ extension Refined.and where Refined.Value: MaybeLetter {
 }
 
 /// `Or` + `Letter` DSL extension.
-extension Refined.Or where Refined.Value: MaybeLetter {
+extension Refined.or where Refined.Value: MaybeLetter {
     public typealias Letter = Refined._Or<_LetterPredicate<Refined.Value>>
     public typealias NonLetter = Refined._Or<Letter._Not>
 }
@@ -1078,7 +1078,7 @@ extension Refined.and where Refined.Value: MaybeJoinControl {
 }
 
 /// `Or` + `JoinControl` DSL extension.
-extension Refined.Or where Refined.Value: MaybeJoinControl {
+extension Refined.or where Refined.Value: MaybeJoinControl {
     public typealias JoinControl = Refined._Or<_JoinControlPredicate<Refined.Value>>
     public typealias NonJoinControl = Refined._Or<JoinControl._Not>
 }
@@ -1114,7 +1114,7 @@ extension Refined.and where Refined.Value: MaybeInfinite {
 }
 
 /// `Or` + `Infinite` DSL extension.
-extension Refined.Or where Refined.Value: MaybeInfinite {
+extension Refined.or where Refined.Value: MaybeInfinite {
     public typealias Infinite = Refined._Or<_InfinitePredicate<Refined.Value>>
     public typealias NonInfinite = Refined._Or<Infinite._Not>
 }
@@ -1150,7 +1150,7 @@ extension Refined.and where Refined.Value: MaybeIdstrinaryOperator {
 }
 
 /// `Or` + `IdstrinaryOperator` DSL extension.
-extension Refined.Or where Refined.Value: MaybeIdstrinaryOperator {
+extension Refined.or where Refined.Value: MaybeIdstrinaryOperator {
     public typealias IdstrinaryOperator = Refined._Or<_IdstrinaryOperatorPredicate<Refined.Value>>
     public typealias NonIdstrinaryOperator = Refined._Or<IdstrinaryOperator._Not>
 }
@@ -1186,7 +1186,7 @@ extension Refined.and where Refined.Value: MaybeIdstart {
 }
 
 /// `Or` + `Idstart` DSL extension.
-extension Refined.Or where Refined.Value: MaybeIdstart {
+extension Refined.or where Refined.Value: MaybeIdstart {
     public typealias Idstart = Refined._Or<_IdstartPredicate<Refined.Value>>
     public typealias NonIdstart = Refined._Or<Idstart._Not>
 }
@@ -1222,7 +1222,7 @@ extension Refined.and where Refined.Value: MaybeIdsbinaryOperator {
 }
 
 /// `Or` + `IdsbinaryOperator` DSL extension.
-extension Refined.Or where Refined.Value: MaybeIdsbinaryOperator {
+extension Refined.or where Refined.Value: MaybeIdsbinaryOperator {
     public typealias IdsbinaryOperator = Refined._Or<_IdsbinaryOperatorPredicate<Refined.Value>>
     public typealias NonIdsbinaryOperator = Refined._Or<IdsbinaryOperator._Not>
 }
@@ -1258,7 +1258,7 @@ extension Refined.and where Refined.Value: MaybeIdeographic {
 }
 
 /// `Or` + `Ideographic` DSL extension.
-extension Refined.Or where Refined.Value: MaybeIdeographic {
+extension Refined.or where Refined.Value: MaybeIdeographic {
     public typealias Ideographic = Refined._Or<_IdeographicPredicate<Refined.Value>>
     public typealias NonIdeographic = Refined._Or<Ideographic._Not>
 }
@@ -1294,7 +1294,7 @@ extension Refined.and where Refined.Value: MaybeIdcontinue {
 }
 
 /// `Or` + `Idcontinue` DSL extension.
-extension Refined.Or where Refined.Value: MaybeIdcontinue {
+extension Refined.or where Refined.Value: MaybeIdcontinue {
     public typealias Idcontinue = Refined._Or<_IdcontinuePredicate<Refined.Value>>
     public typealias NonIdcontinue = Refined._Or<Idcontinue._Not>
 }
@@ -1330,7 +1330,7 @@ extension Refined.and where Refined.Value: MaybeHexDigit {
 }
 
 /// `Or` + `HexDigit` DSL extension.
-extension Refined.Or where Refined.Value: MaybeHexDigit {
+extension Refined.or where Refined.Value: MaybeHexDigit {
     public typealias HexDigit = Refined._Or<_HexDigitPredicate<Refined.Value>>
     public typealias NonHexDigit = Refined._Or<HexDigit._Not>
 }
@@ -1366,7 +1366,7 @@ extension Refined.and where Refined.Value: MaybeGraphemeExtend {
 }
 
 /// `Or` + `GraphemeExtend` DSL extension.
-extension Refined.Or where Refined.Value: MaybeGraphemeExtend {
+extension Refined.or where Refined.Value: MaybeGraphemeExtend {
     public typealias GraphemeExtend = Refined._Or<_GraphemeExtendPredicate<Refined.Value>>
     public typealias NonGraphemeExtend = Refined._Or<GraphemeExtend._Not>
 }
@@ -1402,7 +1402,7 @@ extension Refined.and where Refined.Value: MaybeGraphemeBase {
 }
 
 /// `Or` + `GraphemeBase` DSL extension.
-extension Refined.Or where Refined.Value: MaybeGraphemeBase {
+extension Refined.or where Refined.Value: MaybeGraphemeBase {
     public typealias GraphemeBase = Refined._Or<_GraphemeBasePredicate<Refined.Value>>
     public typealias NonGraphemeBase = Refined._Or<GraphemeBase._Not>
 }
@@ -1438,7 +1438,7 @@ extension Refined.and where Refined.Value: MaybeFullCompositionExclusion {
 }
 
 /// `Or` + `FullCompositionExclusion` DSL extension.
-extension Refined.Or where Refined.Value: MaybeFullCompositionExclusion {
+extension Refined.or where Refined.Value: MaybeFullCompositionExclusion {
     public typealias FullCompositionExclusion = Refined._Or<_FullCompositionExclusionPredicate<Refined.Value>>
     public typealias NonFullCompositionExclusion = Refined._Or<FullCompositionExclusion._Not>
 }
@@ -1474,7 +1474,7 @@ extension Refined.and where Refined.Value: MaybeFinite {
 }
 
 /// `Or` + `Finite` DSL extension.
-extension Refined.Or where Refined.Value: MaybeFinite {
+extension Refined.or where Refined.Value: MaybeFinite {
     public typealias Finite = Refined._Or<_FinitePredicate<Refined.Value>>
     public typealias NonFinite = Refined._Or<Finite._Not>
 }
@@ -1510,7 +1510,7 @@ extension Refined.and where Refined.Value: MaybeExtender {
 }
 
 /// `Or` + `Extender` DSL extension.
-extension Refined.Or where Refined.Value: MaybeExtender {
+extension Refined.or where Refined.Value: MaybeExtender {
     public typealias Extender = Refined._Or<_ExtenderPredicate<Refined.Value>>
     public typealias NonExtender = Refined._Or<Extender._Not>
 }
@@ -1546,7 +1546,7 @@ extension Refined.and where Refined.Value: MaybeEmpty {
 }
 
 /// `Or` + `Empty` DSL extension.
-extension Refined.Or where Refined.Value: MaybeEmpty {
+extension Refined.or where Refined.Value: MaybeEmpty {
     public typealias Empty = Refined._Or<_EmptyPredicate<Refined.Value>>
     public typealias NonEmpty = Refined._Or<Empty._Not>
 }
@@ -1587,7 +1587,7 @@ extension Refined: MaybeEmojiPresentation where WrappedValue: MaybeEmojiPresenta
 
 /// `Or` + `EmojiPresentation` DSL extension.
 @available(watchOS 3.1.1, macOS 10.12.2, tvOS 10.1, iOS 10.2, *)
-    extension Refined.Or where Refined.Value: MaybeEmojiPresentation {
+    extension Refined.or where Refined.Value: MaybeEmojiPresentation {
     public typealias EmojiPresentation = Refined._Or<_EmojiPresentationPredicate<Refined.Value>>
     public typealias NonEmojiPresentation = Refined._Or<EmojiPresentation._Not>
 }
@@ -1628,7 +1628,7 @@ extension Refined: MaybeEmojiModifierBase where WrappedValue: MaybeEmojiModifier
 
 /// `Or` + `EmojiModifierBase` DSL extension.
 @available(watchOS 3.1.1, macOS 10.12.2, tvOS 10.1, iOS 10.2, *)
-    extension Refined.Or where Refined.Value: MaybeEmojiModifierBase {
+    extension Refined.or where Refined.Value: MaybeEmojiModifierBase {
     public typealias EmojiModifierBase = Refined._Or<_EmojiModifierBasePredicate<Refined.Value>>
     public typealias NonEmojiModifierBase = Refined._Or<EmojiModifierBase._Not>
 }
@@ -1669,7 +1669,7 @@ extension Refined: MaybeEmojiModifier where WrappedValue: MaybeEmojiModifier {}
 
 /// `Or` + `EmojiModifier` DSL extension.
 @available(watchOS 3.1.1, macOS 10.12.2, tvOS 10.1, iOS 10.2, *)
-    extension Refined.Or where Refined.Value: MaybeEmojiModifier {
+    extension Refined.or where Refined.Value: MaybeEmojiModifier {
     public typealias EmojiModifier = Refined._Or<_EmojiModifierPredicate<Refined.Value>>
     public typealias NonEmojiModifier = Refined._Or<EmojiModifier._Not>
 }
@@ -1710,7 +1710,7 @@ extension Refined: MaybeEmoji where WrappedValue: MaybeEmoji {}
 
 /// `Or` + `Emoji` DSL extension.
 @available(watchOS 3.1.1, macOS 10.12.2, tvOS 10.1, iOS 10.2, *)
-    extension Refined.Or where Refined.Value: MaybeEmoji {
+    extension Refined.or where Refined.Value: MaybeEmoji {
     public typealias Emoji = Refined._Or<_EmojiPredicate<Refined.Value>>
     public typealias NonEmoji = Refined._Or<Emoji._Not>
 }
@@ -1746,7 +1746,7 @@ extension Refined.and where Refined.Value: MaybeDiacritic {
 }
 
 /// `Or` + `Diacritic` DSL extension.
-extension Refined.Or where Refined.Value: MaybeDiacritic {
+extension Refined.or where Refined.Value: MaybeDiacritic {
     public typealias Diacritic = Refined._Or<_DiacriticPredicate<Refined.Value>>
     public typealias NonDiacritic = Refined._Or<Diacritic._Not>
 }
@@ -1782,7 +1782,7 @@ extension Refined.and where Refined.Value: MaybeDeprecated {
 }
 
 /// `Or` + `Deprecated` DSL extension.
-extension Refined.Or where Refined.Value: MaybeDeprecated {
+extension Refined.or where Refined.Value: MaybeDeprecated {
     public typealias Deprecated = Refined._Or<_DeprecatedPredicate<Refined.Value>>
     public typealias NonDeprecated = Refined._Or<Deprecated._Not>
 }
@@ -1818,7 +1818,7 @@ extension Refined.and where Refined.Value: MaybeDefaultIgnorableCodePoint {
 }
 
 /// `Or` + `DefaultIgnorableCodePoint` DSL extension.
-extension Refined.Or where Refined.Value: MaybeDefaultIgnorableCodePoint {
+extension Refined.or where Refined.Value: MaybeDefaultIgnorableCodePoint {
     public typealias DefaultIgnorableCodePoint = Refined._Or<_DefaultIgnorableCodePointPredicate<Refined.Value>>
     public typealias NonDefaultIgnorableCodePoint = Refined._Or<DefaultIgnorableCodePoint._Not>
 }
@@ -1854,7 +1854,7 @@ extension Refined.and where Refined.Value: MaybeDash {
 }
 
 /// `Or` + `Dash` DSL extension.
-extension Refined.Or where Refined.Value: MaybeDash {
+extension Refined.or where Refined.Value: MaybeDash {
     public typealias Dash = Refined._Or<_DashPredicate<Refined.Value>>
     public typealias NonDash = Refined._Or<Dash._Not>
 }
@@ -1890,7 +1890,7 @@ extension Refined.and where Refined.Value: MaybeCurrencySymbol {
 }
 
 /// `Or` + `CurrencySymbol` DSL extension.
-extension Refined.Or where Refined.Value: MaybeCurrencySymbol {
+extension Refined.or where Refined.Value: MaybeCurrencySymbol {
     public typealias CurrencySymbol = Refined._Or<_CurrencySymbolPredicate<Refined.Value>>
     public typealias NonCurrencySymbol = Refined._Or<CurrencySymbol._Not>
 }
@@ -1926,7 +1926,7 @@ extension Refined.and where Refined.Value: MaybeCased {
 }
 
 /// `Or` + `Cased` DSL extension.
-extension Refined.Or where Refined.Value: MaybeCased {
+extension Refined.or where Refined.Value: MaybeCased {
     public typealias Cased = Refined._Or<_CasedPredicate<Refined.Value>>
     public typealias NonCased = Refined._Or<Cased._Not>
 }
@@ -1962,7 +1962,7 @@ extension Refined.and where Refined.Value: MaybeCaseIgnorable {
 }
 
 /// `Or` + `CaseIgnorable` DSL extension.
-extension Refined.Or where Refined.Value: MaybeCaseIgnorable {
+extension Refined.or where Refined.Value: MaybeCaseIgnorable {
     public typealias CaseIgnorable = Refined._Or<_CaseIgnorablePredicate<Refined.Value>>
     public typealias NonCaseIgnorable = Refined._Or<CaseIgnorable._Not>
 }
@@ -1998,7 +1998,7 @@ extension Refined.and where Refined.Value: MaybeCanonical {
 }
 
 /// `Or` + `Canonical` DSL extension.
-extension Refined.Or where Refined.Value: MaybeCanonical {
+extension Refined.or where Refined.Value: MaybeCanonical {
     public typealias Canonical = Refined._Or<_CanonicalPredicate<Refined.Value>>
     public typealias NonCanonical = Refined._Or<Canonical._Not>
 }
@@ -2034,7 +2034,7 @@ extension Refined.and where Refined.Value: MaybeBidiMirrored {
 }
 
 /// `Or` + `BidiMirrored` DSL extension.
-extension Refined.Or where Refined.Value: MaybeBidiMirrored {
+extension Refined.or where Refined.Value: MaybeBidiMirrored {
     public typealias BidiMirrored = Refined._Or<_BidiMirroredPredicate<Refined.Value>>
     public typealias NonBidiMirrored = Refined._Or<BidiMirrored._Not>
 }
@@ -2070,7 +2070,7 @@ extension Refined.and where Refined.Value: MaybeBidiControl {
 }
 
 /// `Or` + `BidiControl` DSL extension.
-extension Refined.Or where Refined.Value: MaybeBidiControl {
+extension Refined.or where Refined.Value: MaybeBidiControl {
     public typealias BidiControl = Refined._Or<_BidiControlPredicate<Refined.Value>>
     public typealias NonBidiControl = Refined._Or<BidiControl._Not>
 }
@@ -2106,7 +2106,7 @@ extension Refined.and where Refined.Value: MaybeAsciihexDigit {
 }
 
 /// `Or` + `AsciihexDigit` DSL extension.
-extension Refined.Or where Refined.Value: MaybeAsciihexDigit {
+extension Refined.or where Refined.Value: MaybeAsciihexDigit {
     public typealias AsciihexDigit = Refined._Or<_AsciihexDigitPredicate<Refined.Value>>
     public typealias NonAsciihexDigit = Refined._Or<AsciihexDigit._Not>
 }
@@ -2142,7 +2142,7 @@ extension Refined.and where Refined.Value: MaybeAscii {
 }
 
 /// `Or` + `Ascii` DSL extension.
-extension Refined.Or where Refined.Value: MaybeAscii {
+extension Refined.or where Refined.Value: MaybeAscii {
     public typealias Ascii = Refined._Or<_AsciiPredicate<Refined.Value>>
     public typealias NonAscii = Refined._Or<Ascii._Not>
 }
@@ -2178,7 +2178,7 @@ extension Refined.and where Refined.Value: MaybeAlphabetic {
 }
 
 /// `Or` + `Alphabetic` DSL extension.
-extension Refined.Or where Refined.Value: MaybeAlphabetic {
+extension Refined.or where Refined.Value: MaybeAlphabetic {
     public typealias Alphabetic = Refined._Or<_AlphabeticPredicate<Refined.Value>>
     public typealias NonAlphabetic = Refined._Or<Alphabetic._Not>
 }

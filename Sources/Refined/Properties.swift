@@ -32,7 +32,7 @@ extension Refined.and where Refined.Value: StartIndexable {
 }
 
 /// `Or` + `Startindex` DSL extension.
-extension Refined.Or where Refined.Value: StartIndexable {
+extension Refined.or where Refined.Value: StartIndexable {
     public typealias Startindex<T: Predicate> = Refined._Or<_StartindexPredicate<Refined.Value, T>> where T.Value == Int
 }
 
@@ -65,7 +65,7 @@ extension Refined.and where Refined.Value: SignificandBitPatternable {
 }
 
 /// `Or` + `Significandbitpattern` DSL extension.
-extension Refined.Or where Refined.Value: SignificandBitPatternable {
+extension Refined.or where Refined.Value: SignificandBitPatternable {
     public typealias Significandbitpattern<T: Predicate> = Refined._Or<_SignificandbitpatternPredicate<Refined.Value, T>> where T.Value == UInt64
 }
 
@@ -98,7 +98,7 @@ extension Refined.and where Refined.Value: Exponentiable {
 }
 
 /// `Or` + `Exponent` DSL extension.
-extension Refined.Or where Refined.Value: Exponentiable {
+extension Refined.or where Refined.Value: Exponentiable {
     public typealias Exponent<T: Predicate> = Refined._Or<_ExponentPredicate<Refined.Value, T>> where T.Value == Int
 }
 
@@ -131,7 +131,7 @@ extension Refined.and where Refined.Value: ExponentBitPatternable {
 }
 
 /// `Or` + `Exponentbitpattern` DSL extension.
-extension Refined.Or where Refined.Value: ExponentBitPatternable {
+extension Refined.or where Refined.Value: ExponentBitPatternable {
     public typealias Exponentbitpattern<T: Predicate> = Refined._Or<_ExponentbitpatternPredicate<Refined.Value, T>> where T.Value == UInt
 }
 
@@ -164,7 +164,7 @@ extension Refined.and where Refined.Value: EndIndexable {
 }
 
 /// `Or` + `Endindex` DSL extension.
-extension Refined.Or where Refined.Value: EndIndexable {
+extension Refined.or where Refined.Value: EndIndexable {
     public typealias Endindex<T: Predicate> = Refined._Or<_EndindexPredicate<Refined.Value, T>> where T.Value == Int
 }
 
@@ -197,7 +197,7 @@ extension Refined.and where Refined.Value: Countable {
 }
 
 /// `Or` + `Count` DSL extension.
-extension Refined.Or where Refined.Value: Countable {
+extension Refined.or where Refined.Value: Countable {
     public typealias Count<T: Predicate> = Refined._Or<_CountPredicate<Refined.Value, T>> where T.Value == Int
 }
 
@@ -230,6 +230,6 @@ extension Refined.and where Refined.Value: Capacitying {
 }
 
 /// `Or` + `Capacity` DSL extension.
-extension Refined.Or where Refined.Value: Capacitying {
+extension Refined.or where Refined.Value: Capacitying {
     public typealias Capacity<T: Predicate> = Refined._Or<_CapacityPredicate<Refined.Value, T>> where T.Value == Int
 }

@@ -5,7 +5,7 @@ public typealias _OrPredicate = Or
 
 /// Or DSL extension.
 extension Refined {    
-    public struct Or: Predicate {
+    public struct or: Predicate {
         @available(*, unavailable)
         private init() {}
         

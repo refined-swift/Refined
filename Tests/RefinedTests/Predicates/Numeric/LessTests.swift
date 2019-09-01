@@ -3,9 +3,9 @@ import Refined
 
 final class LessTests: XCTestCase {
     func testLessCanBeValid() {
-        XCTAssertNotNil(Int.Less<One>.Or.Less<One>(0))
+        XCTAssertNotNil(Int.Less<One>.or.Less<One>(0))
         XCTAssertNotNil(Refined<Less<Four>>(3))
-        XCTAssertNotNil(Int.Less<Four>.Or.Less<One>(3))
+        XCTAssertNotNil(Int.Less<Four>.or.Less<One>(3))
         XCTAssertNotNil(Double.Less<TwoDotFive>(1.5))
     }
 

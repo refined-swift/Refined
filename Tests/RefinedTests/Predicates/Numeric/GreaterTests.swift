@@ -3,9 +3,9 @@ import Refined
 
 final class GreaterTests: XCTestCase {
     func testGreaterCanBeValid() {
-        XCTAssertNotNil(Int.Greater<One>.Or.Greater<One>(2))
+        XCTAssertNotNil(Int.Greater<One>.or.Greater<One>(2))
         XCTAssertNotNil(Refined<Greater<Four>>(6))
-        XCTAssertNotNil(Int.Greater<Four>.Or.Greater<One>(2))
+        XCTAssertNotNil(Int.Greater<Four>.or.Greater<One>(2))
         XCTAssertNotNil(Double.Greater<TwoDotFive>(2.51))
     }
 

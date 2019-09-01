@@ -5,7 +5,7 @@ final class GreaterEqualTests: XCTestCase {
     func testGreaterEqualCanBeValid() {
         XCTAssertNotNil(Int.GreaterEqual<One>.and.GreaterEqual<One>(1))
         XCTAssertNotNil(Refined<GreaterEqual<Four>>(6))
-        XCTAssertNotNil(Int.GreaterEqual<Four>.Or.GreaterEqual<One>(4))
+        XCTAssertNotNil(Int.GreaterEqual<Four>.or.GreaterEqual<One>(4))
         XCTAssertNotNil(Double.GreaterEqual<TwoDotFive>(3.6))
     }
 

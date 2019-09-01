@@ -32,7 +32,7 @@ extension Refined.and where Refined.Value: LessEqualCompatible {
 }
 
 /// `Or` + `LessEqual` DSL extension.
-extension Refined.Or where Refined.Value: LessEqualCompatible {
+extension Refined.or where Refined.Value: LessEqualCompatible {
     public typealias LessEqual<T: PredicateValue> = Refined._Or<_LessEqualPredicate<T>> where T.Value == Refined.Value
 }
 
@@ -65,7 +65,7 @@ extension Refined.and where Refined.Value: LessCompatible {
 }
 
 /// `Or` + `Less` DSL extension.
-extension Refined.Or where Refined.Value: LessCompatible {
+extension Refined.or where Refined.Value: LessCompatible {
     public typealias Less<T: PredicateValue> = Refined._Or<_LessPredicate<T>> where T.Value == Refined.Value
 }
 
@@ -98,7 +98,7 @@ extension Refined.and where Refined.Value: GreaterEqualCompatible {
 }
 
 /// `Or` + `GreaterEqual` DSL extension.
-extension Refined.Or where Refined.Value: GreaterEqualCompatible {
+extension Refined.or where Refined.Value: GreaterEqualCompatible {
     public typealias GreaterEqual<T: PredicateValue> = Refined._Or<_GreaterEqualPredicate<T>> where T.Value == Refined.Value
 }
 
@@ -131,7 +131,7 @@ extension Refined.and where Refined.Value: GreaterCompatible {
 }
 
 /// `Or` + `Greater` DSL extension.
-extension Refined.Or where Refined.Value: GreaterCompatible {
+extension Refined.or where Refined.Value: GreaterCompatible {
     public typealias Greater<T: PredicateValue> = Refined._Or<_GreaterPredicate<T>> where T.Value == Refined.Value
 }
 
@@ -164,6 +164,6 @@ extension Refined.and where Refined.Value: EqualCompatible {
 }
 
 /// `Or` + `Equal` DSL extension.
-extension Refined.Or where Refined.Value: EqualCompatible {
+extension Refined.or where Refined.Value: EqualCompatible {
     public typealias Equal<T: PredicateValue> = Refined._Or<_EqualPredicate<T>> where T.Value == Refined.Value
 }
