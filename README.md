@@ -2,12 +2,14 @@
 
 Generics based [refinement types](https://en.wikipedia.org/wiki/Refinement_type) implementation for Swift.
 
-## Example
+## Examples
+
+### New predicate: Even integer
 
 You define a type constraint by conforming to `Predicate` protocol.
 
 ```swift
-struct Even: Predicate {
+struct EvenInt: Predicate {
     static func isValid(value: Int) -> Bool {
         return value % 2 == 0
     }
@@ -17,19 +19,62 @@ struct Even: Predicate {
 In order to use the refined type described by the predicate, you parametrize the generic `Refined` with it.
 
 ```swift
-let even: Refined<Even>
+let even: Refined<EvenInt>
 ```
 
 You can create a typealias to provide a less verbose way to refer to the new type.
 
 ```swift
 extension Int {
-    typealias Even = Refined<Even>
+    typealias Even = Refined<EvenInt>
 }
 
 let even: Int.Even
 
 ```
+
+### Combine predicates: Letter or Number character
+
+You can also define refined types by combining existing predicates.
+
+```swift
+let alphanumeric: Refined<Or<Letter<Character>, Number<Character>>>
+```
+
+Refined's *fluent interface* makes type definition shorter and more readable. 
+
+```swift
+let alphanumeric: Character.Letter.or.Number
+```
+
+### Extend DSL: Alphanumeric constraint
+
+Adding more predicates to the DSL is a matter of adding more typealias to Refined's *fluent interface*:
+
+- a typealias of the refined type into to the *base type*
+- a typealias of `Refined._And` parameterized with the new type
+- a typealias of `Refined._Or` parameterized with the new type
+
+```swift
+extension MaybeLetter where Self: MaybeNumber {
+    public typealias Alphanumeric = Letter.or.Number
+}
+
+extension Refined.And where Refined.Value: MaybeLetter & MaybeNumber  {
+    public typealias Alphanumeric = Refined._And<Letter.or.Number>
+}
+
+extension Refined.Or where Refined.Value: MaybeLetter & MaybeNumber {
+    public typealias Alphanumeric = Refined._Or<Letter.or.Number>
+}
+```
+
+The previous extensions make it possible to use the `Alphanumeric` constraint on any type that conforms to `MaybeLetter` and `MaybeNumber` protocols.
+
+```swift
+let foo: Character.Alphanumeric.or.Emoji
+```
+
 
 ## Alternatives
 
