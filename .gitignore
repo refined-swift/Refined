@@ -1,5 +1,18 @@
+## macOS
+#
+
 .DS_Store
+
+## SPM
+#
+
 /.build
 /Packages
 /*.xcodeproj
+xcuserdata/
+/.swiftpm
+
+## Other
+#
+
 /Vendor
